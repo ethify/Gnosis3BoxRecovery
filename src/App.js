@@ -4,13 +4,14 @@ import Header from "./components/Header";
 import { withRouter } from "react-router";
 import Modal from "./components/Modal";
 import CreateSafeWidget from "./components/CreateSafeWidget";
+import SafeDetailsWidget from "./components/SafeDetailsWidget";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       address: undefined,
-      page: "wallet",
+      page: "safe",
       openModal: false,
       modalConfig: {},
     };
@@ -73,6 +74,11 @@ class App extends React.Component {
           changePage={this.changePage}
         />
         {this.state.page === "wallet" ? <CreateSafeWidget /> : null}
+        {this.state.page === "safe" ? (
+          <SafeDetailsWidget
+            address={"0x5d2629a9E885C5F0D558d6fE28A1f856ABdBDD54"}
+          />
+        ) : null}
       </div>
     );
   }

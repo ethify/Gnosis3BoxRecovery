@@ -32,17 +32,17 @@ function Header(props) {
       <div className="header-first-container">
         <div className="logo-container">
           <img
-            src="https://gblobscdn.gitbook.com/orgs%2F-LgbH7epoDzyZZsd5KbE%2Favatar.png?generation=1578566725631142&alt=media"
+            src={require("../../assets/icons/gnosis_safe_logo.png")}
             alt="logo"
             className="app-logo"
           />
-          <span className="logo-title">Deficenter</span>
+          <span className="logo-title">CoolRecovery</span>
         </div>
 
         <div className="header-tab-container">
           <div
             className={`header-tab ${
-              props.page === "wallet" ? "tab-active" : null
+              props.page !== "recover" ? "tab-active" : null
             }`}
             onClick={(e) => history.push("/wallet")}
           >

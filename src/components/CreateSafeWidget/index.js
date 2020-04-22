@@ -14,12 +14,12 @@ function CreateSafeWidget(props) {
   }, []);
 
   return (
-    <div className="safe-widget">
+    <div className="create-safe-widget">
       <div className="widget-main-container">
         {loading ? (
           <Loader loaderType="box" />
         ) : (
-          <div className="safe-connect">
+          <div className="create-safe-container">
             <div className="logo-container">
               <img
                 src={require("../../assets/icons/gnosis_safe_logo.png")}
@@ -32,7 +32,9 @@ function CreateSafeWidget(props) {
               <button
                 type="button"
                 className="create-button"
-                onClick={(e) => {}}
+                onClick={(e) => {
+                  history.push("/safe");
+                }}
               >
                 <FontAwesomeIcon icon={faPlus} />
                 <span>Create new Safe</span>
