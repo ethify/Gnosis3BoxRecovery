@@ -1,5 +1,6 @@
 import React from "react";
 import "./header.scss";
+import { getAccount } from "../../services";
 import { useHistory } from "react-router-dom";
 import makeBlockie from "ethereum-blockies-base64";
 import { shortenAddress } from "../../utils";
@@ -7,7 +8,7 @@ import { shortenAddress } from "../../utils";
 function Header(props) {
   let history = useHistory();
   const handleConnect = async () => {
-    const address = "0xa7B5B93BF8B322023BDa57e2C86B57f4DDb4F4a1";
+    const address = await getAccount();
     props.setAddress(address);
   };
   const getAddressTemplate = (address) => {

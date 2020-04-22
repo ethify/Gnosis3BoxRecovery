@@ -9,6 +9,10 @@ function ImportWalletWidget(props) {
   let history = useHistory();
   const [loading, setLoading] = React.useState(true);
 
+  React.useEffect(() => {
+    setLoading(false);
+  }, []);
+
   return (
     <div className="receipt-widget">
       <div className="widget-main-container">
