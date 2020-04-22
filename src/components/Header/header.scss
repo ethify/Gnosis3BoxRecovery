@@ -1,0 +1,78 @@
+.header {
+  display: flex;
+  padding: 20px 25px;
+  justify-content: space-between;
+  align-items: center;
+
+  .header-first-container {
+    display: flex;
+    width: 58%;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+
+      .app-logo {
+        height: 48px;
+        width: 48px;
+        border-radius: 6px;
+      }
+      .logo-title {
+        font-weight: 800;
+        font-size: 32px;
+        text-transform: capitalize;
+        margin-left: 12px;
+        color: #102544;
+      }
+    }
+
+    .header-tab-container {
+      display: flex;
+      align-items: center;
+
+      .header-tab {
+        padding: 0.5em 2.5em;
+        border-radius: 24px;
+        margin-left: 30px;
+        font-weight: 500;
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.160784);
+        cursor: pointer;
+      }
+
+      .tab-active {
+        background: var(--themeColor);
+        color: white;
+      }
+    }
+  }
+
+  .wallet-container {
+    padding: 4px 25px;
+    border: 1px solid var(--themeColor);
+    border-radius: 3rem;
+    color: var(--themeColor);
+    font-size: 0.9rem;
+    background-color: transparent;
+    cursor: pointer;
+    user-select: none;
+    font-weight: 500;
+
+    .address-container {
+      display: flex;
+      align-items: center;
+      .address-blockie {
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .connected {
+    color: var(--labelColor);
+    border: 1px solid var(--bodyBg);
+  }
+}
