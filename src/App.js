@@ -3,14 +3,14 @@ import "./App.scss";
 import Header from "./components/Header";
 import { withRouter } from "react-router";
 import Modal from "./components/Modal";
-import ImportWalletWidget from "./components/ImportWalletWidget";
+import CreateSafeWidget from "./components/CreateSafeWidget";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       address: undefined,
-      page: "pools",
+      page: "wallet",
       openModal: false,
       modalConfig: {},
     };
@@ -72,7 +72,7 @@ class App extends React.Component {
           page={this.state.page}
           changePage={this.changePage}
         />
-        {this.state.page === "wallet" ? <ImportWalletWidget /> : null}
+        {this.state.page === "wallet" ? <CreateSafeWidget /> : null}
       </div>
     );
   }

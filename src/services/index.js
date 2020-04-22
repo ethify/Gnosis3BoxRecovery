@@ -1,4 +1,5 @@
 import Onboard from "bnc-onboard";
+import * as Web3 from "web3";
 
 let web3;
 
@@ -7,7 +8,7 @@ const onboard = Onboard({
   networkId: 1, // [Integer] The Ethereum network ID your Dapp uses.
   subscriptions: {
     wallet: (wallet) => {
-      //   web3 = new Web3(wallet.provider);
+      web3 = new Web3(wallet.provider);
     },
   },
 });

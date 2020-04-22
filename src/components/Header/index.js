@@ -42,7 +42,7 @@ function Header(props) {
         <div className="header-tab-container">
           <div
             className={`header-tab ${
-              props.page === "swap" ? "tab-active" : null
+              props.page === "wallet" ? "tab-active" : null
             }`}
             onClick={(e) => history.push("/wallet")}
           >
@@ -50,7 +50,7 @@ function Header(props) {
           </div>
           <div
             className={`header-tab ${
-              props.page !== "swap" ? "tab-active" : null
+              props.page === "recover" ? "tab-active" : null
             }`}
             onClick={(e) => history.push("/recover")}
           >

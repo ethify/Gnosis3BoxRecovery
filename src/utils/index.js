@@ -1,4 +1,4 @@
-import { ethers } from "ethers";
+import * as Web3 from "web3";
 export function shortenAddress(pAddress, pDigits = 4) {
   if (!isAddress(pAddress)) {
     throw Error(`Invalid 'address' parameter '${pAddress}'.`);
@@ -10,7 +10,7 @@ export function shortenAddress(pAddress, pDigits = 4) {
 
 export function isAddress(pValue) {
   try {
-    return ethers.utils.getAddress(pValue.toLowerCase());
+    return Web3.utils.isAddress(pValue.toLowerCase());
   } catch {
     return false;
   }
