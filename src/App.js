@@ -5,6 +5,7 @@ import { withRouter } from "react-router";
 import Modal from "./components/Modal";
 import CreateSafeWidget from "./components/CreateSafeWidget";
 import SafeDetailsWidget from "./components/SafeDetailsWidget";
+import { getAccount } from './services'
 
 class App extends React.Component {
   constructor(props) {
@@ -45,7 +46,7 @@ class App extends React.Component {
     }
   };
 
-  componentDidMount() {
+  async componentDidMount() {
     this.routeAction();
   }
 

@@ -6,14 +6,32 @@ import { faEthereum } from "@fortawesome/free-brands-svg-icons";
 import { useHistory } from "react-router-dom";
 import makeBlockie from "ethereum-blockies-base64";
 import Loader from "../Loader";
+import { getCPK } from "../../services";
 
 function SafeDetailsWidget(props) {
   let history = useHistory();
   const [loading, setLoading] = React.useState(true);
+  const [safeCPK, setSafeCPK] = React.useState({});
+  const [isModal, setIsModal] = React.useState(false);
+  const [ userSecret, setUserSecret ] = React.useState('')
 
   React.useEffect(() => {
     setLoading(false);
+    const createCPK = async () => {
+      const cpk = await getCPK();
+      console.log("cpkkk", cpk);
+      setSafeCPK(cpk);
+    };
+    createCPK();
   }, []);
+
+  const setupBackup = async () => {
+    setIsModal(true);
+  };
+
+  const submitBackup = async () => {
+    console.log('Click Submit')
+  }
 
   return (
     <div className="safe-details-widget">
@@ -39,14 +57,14 @@ function SafeDetailsWidget(props) {
                   <span className="safe-permissions">Owner</span>
                 </div>
                 <div className="safe-address-detail">
-                  <span className="safe-address">{props.address}</span>
+                  <span className="safe-address">{safeCPK.address}</span>
                 </div>
               </div>
               <div className="recovery-setup-container">
                 <button
                   type="button"
                   className="create-button"
-                  onClick={(e) => {}}
+                  onClick={setupBackup}
                 >
                   <FontAwesomeIcon icon={faKey} />
                   <span>Setup Restore</span>
@@ -82,6 +100,34 @@ function SafeDetailsWidget(props) {
           </div>
         )}
       </div>
+      {isModal ? (
+        <div className="modal">
+          <div className="modal-background"></div>
+          <div className="modal-content">
+            <div className="widget-main-container">
+            <div className="field">
+              <div className="control">
+                <h3>Enter a Secret</h3>
+                <input
+                  className="input is-primary"
+                  type="text"
+                  placeholder="Primary input"
+                  onChange = {(e) => {setUserSecret(e.target.value)}}
+                />
+                <button
+                  type="button"
+                  className="create-button"
+                  onClick={submitBackup}
+                >
+                  <FontAwesomeIcon icon={faKey} />
+                  <span>Submit</span>
+                </button>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 }
