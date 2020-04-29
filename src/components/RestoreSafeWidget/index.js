@@ -1,30 +1,29 @@
 import React from "react";
-import "./create_safe_widget.scss";
+import "./restore_safe_widget.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { useHistory } from "react-router-dom";
 import Loader from "../Loader";
-import { getAccount } from "../../services";
 import Box from '3box';
-import { getCPK } from '../../services';
 
-function CreateSafeWidget(props) {
+function RestoreSafeWidget(props) {
   let history = useHistory();
   const [loading, setLoading] = React.useState(true);
+  const [safeAddress, setSafeAddress] = React.useState('');
+  const [safeMasterKey, setSafeMasterKey] = React.useState('');
 
   React.useEffect(() => {
     setLoading(false);
   }, []);
 
-  const createNewSafe = async () => {
-    const cpk = await getCPK();
-    console.log("cpkkk", cpk);
-    props.setCPK(cpk)
-    history.push('/safe')
+  const recoverSafe = async () => {
+    // history.push('/safe')
+    // console.log(safeMasterKey, safeAddress)
   }
 
+
   return (
-    <div className="create-safe-widget">
+    <div className="recover-safe-widget">
       <div className="widget-main-container">
         {loading ? (
           <Loader loaderType="box" />
@@ -38,23 +37,23 @@ function CreateSafeWidget(props) {
                 />
               </div>
               <div className="create-button-container">
-                <h2 className="create-safe-title">Welcome to Gnosis Safe</h2>
+                <div className="create-safe-title-container">
+                  <h2 className="create-safe-title">Simply recover your safe using master key</h2>
+                </div>
+                <div className="safe-address-container">
+                  <input type="text" className="safe-address-input" value={safeAddress} onChange={e => setSafeAddress(e.target.value)} placeholder="Enter safe address" />
+                </div>
+                <div className="safe-master-key-container">
+                  <input type="password" className="safe-master-key-input" value={safeMasterKey} onChange={e => setSafeMasterKey(e.target.value)} placeholder="Enter your master key to recover" />
+                </div>
                 <button
                   type="button"
                   className="create-button"
-                  onClick={createNewSafe}
+                  onClick={recoverSafe}
                 >
                   <FontAwesomeIcon icon={faPlus} />
                   <span>Create new Safe</span>
                 </button>
-                {/* <button
-                type="button"
-                className="create-button"
-                onClick={testFunction}
-              >
-                <FontAwesomeIcon icon={faPlus} />
-                <span>Testing</span>
-              </button> */}
               </div>
             </div>
           )}
@@ -63,4 +62,4 @@ function CreateSafeWidget(props) {
   );
 }
 
-export default CreateSafeWidget;
+export default RestoreSafeWidget;
