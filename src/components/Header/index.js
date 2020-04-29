@@ -7,10 +7,12 @@ import { shortenAddress } from "../../utils";
 
 function Header(props) {
   let history = useHistory();
+
   const handleConnect = async () => {
     const address = await getAccount();
     props.setAddress(address);
   };
+
   const getAddressTemplate = (address) => {
     if (address) {
       return (
@@ -27,6 +29,7 @@ function Header(props) {
       return <div>Connect to Wallet</div>;
     }
   };
+  
   return (
     <div className="header">
       <div className="header-first-container">

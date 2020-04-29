@@ -5,7 +5,8 @@ import { withRouter } from "react-router";
 import Modal from "./components/Modal";
 import CreateSafeWidget from "./components/CreateSafeWidget";
 import SafeDetailsWidget from "./components/SafeDetailsWidget";
-import { getAccount } from './services'
+import RecoverSafeWidget from "./components/RecoverSafeWidget";
+import { getAccount } from "./services";
 
 class App extends React.Component {
   constructor(props) {
@@ -15,8 +16,13 @@ class App extends React.Component {
       page: "safe",
       openModal: false,
       modalConfig: {},
+      cpk: null,
     };
   }
+
+  setcpk = (cpk) => {
+    this.setState({ cpk });
+  };
 
   changeAddress = (address) => {
     this.setState({ address });
@@ -63,21 +69,34 @@ class App extends React.Component {
     this.checkEthereumChange();
     return (
       <div className="App">
-        {/* <Modal
-          setOpenModal={this.setOpenModal}
-          openModal={this.state.openModal}
-          config={this.state.modalConfig}
-        /> */}
+        {
+          <Modal
+            setOpenModal={this.setOpenModal}
+            openModal={this.state.openModal}
+            config={this.state.modalConfig}
+            cpk={this.state.cpk}
+          />
+        }
         <Header
           setAddress={this.changeAddress}
           address={this.state.address}
           page={this.state.page}
           changePage={this.changePage}
         />
-        {this.state.page === "wallet" ? <CreateSafeWidget /> : null}
+        {
+          this.state.page === "recover" ? (
+            <RecoverSafeWidget></RecoverSafeWidget>
+          ) : null
+        }
+        {this.state.page === "wallet" ? (
+          <CreateSafeWidget setCPK={this.setcpk} />
+        ) : null}
         {this.state.page === "safe" ? (
           <SafeDetailsWidget
             address={"0x5d2629a9E885C5F0D558d6fE28A1f856ABdBDD54"}
+            cpk={this.state.cpk}
+            setModalConfig={this.setModalConfig}
+            setOpenModal={this.setOpenModal}
           />
         ) : null}
       </div>

@@ -1,0 +1,105 @@
+@mixin poCentering {
+  top: 50%;
+  right: 50%;
+  bottom: 50%;
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.recover-safe-widget {
+  width: 460px;
+  height: 564px;
+  padding: 10px 20px;
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.160784);
+  overflow: hidden;
+  border-radius: 6px;
+  @include poCentering();
+
+  .widget-main-container {
+    .recover-safe-container {
+      display: flex;
+      flex-direction: column;
+      .logo-container {
+        display: flex;
+        flex-grow: 1;
+        align-items: center;
+        justify-content: center;
+        margin: 5em 0em;
+        .gnosis-safe-logo {
+          height: 120px;
+          width: 120px;
+        }
+      }
+
+      .recover-button-container {
+        text-align: center;
+        margin-top: 3rem;
+
+        .recover-safe-title {
+          color: var(--themeColorDark);
+        }
+
+        .recover-safe-text {
+          width: 56%;
+          padding: 1rem 2rem;
+          border-width: initial;
+          border-style: none;
+          border-color: initial;
+          border-image: initial;
+          outline: none;
+          box-shadow: 0 2px 4px #a9a9a985;
+          transition: all 0.2s ease-in;
+        }
+
+        .recover-button {
+          width: 56%;
+          background: var(--themeColor);
+          color: var(--white);
+          padding: 1rem 2rem;
+          border-radius: 0.5rem;
+          border-width: initial;
+          border-style: none;
+          border-color: initial;
+          border-image: initial;
+          outline: none;
+          font-size: 1rem;
+          cursor: pointer;
+          user-select: none;
+          box-shadow: 0 2px 4px #a9a9a985;
+          transition: all 0.2s ease-in;
+
+          span {
+            margin-left: 8px;
+          }
+
+          &:hover {
+            background: #000e1c;
+            transform: scale(1.01);
+            box-shadow: 0 6px 4px #a9a9a985;
+          }
+
+          &:active {
+            background: #000e1c;
+            box-shadow: 0 5px 4px darken(#a9a9a985, 5%);
+            transform: translateY(1px);
+          }
+
+          &:disabled {
+            cursor: not-allowed;
+            background: lighten(#028c73, 10);
+
+            &:hover {
+              transform: scale(1) !important;
+              box-shadow: 0 2px 4px #a9a9a985 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -6,32 +6,34 @@ import { faEthereum } from "@fortawesome/free-brands-svg-icons";
 import { useHistory } from "react-router-dom";
 import makeBlockie from "ethereum-blockies-base64";
 import Loader from "../Loader";
-import { getCPK } from "../../services";
+import Modal from "../Modal";
+import { getBalance } from '../../services';
 
 function SafeDetailsWidget(props) {
   let history = useHistory();
+
   const [loading, setLoading] = React.useState(true);
-  const [safeCPK, setSafeCPK] = React.useState({});
-  const [isModal, setIsModal] = React.useState(false);
-  const [ userSecret, setUserSecret ] = React.useState('')
+  const [ safeBalance, setSafeBalance ] = React.useState(0)
 
   React.useEffect(() => {
+    console.log("Details Page");
     setLoading(false);
-    const createCPK = async () => {
-      const cpk = await getCPK();
-      console.log("cpkkk", cpk);
-      setSafeCPK(cpk);
-    };
-    createCPK();
-  }, []);
+    const getBalanc = async () => {
+      if (props.cpk !== null){
+        const bal = await getBalance(props.cpk.address.toString())
+        setSafeBalance(bal/(10**18))
+      }
+    }
+    getBalanc()
+  }, [props.cpk]);
 
   const setupBackup = async () => {
-    setIsModal(true);
+    props.setOpenModal(true)
+    props.setModalConfig({
+      title: 'Setup Recovery',
+      type: 'setUpRecovery'
+    })
   };
-
-  const submitBackup = async () => {
-    console.log('Click Submit')
-  }
 
   return (
     <div className="safe-details-widget">
@@ -57,7 +59,7 @@ function SafeDetailsWidget(props) {
                   <span className="safe-permissions">Owner</span>
                 </div>
                 <div className="safe-address-detail">
-                  <span className="safe-address">{safeCPK.address}</span>
+                  <span className="safe-address">{props.cpk.address.toString()}</span>
                 </div>
               </div>
               <div className="recovery-setup-container">
@@ -92,7 +94,9 @@ function SafeDetailsWidget(props) {
                       </span>
                       <span className="token-name">Ether</span>
                     </div>
-                    <div className="td">15,000 ETH</div>
+                    <div className="td">
+                      {safeBalance}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -100,34 +104,6 @@ function SafeDetailsWidget(props) {
           </div>
         )}
       </div>
-      {isModal ? (
-        <div className="modal">
-          <div className="modal-background"></div>
-          <div className="modal-content">
-            <div className="widget-main-container">
-            <div className="field">
-              <div className="control">
-                <h3>Enter a Secret</h3>
-                <input
-                  className="input is-primary"
-                  type="text"
-                  placeholder="Primary input"
-                  onChange = {(e) => {setUserSecret(e.target.value)}}
-                />
-                <button
-                  type="button"
-                  className="create-button"
-                  onClick={submitBackup}
-                >
-                  <FontAwesomeIcon icon={faKey} />
-                  <span>Submit</span>
-                </button>
-              </div>
-            </div>
-            </div>
-          </div>
-        </div>
-      ) : null}
     </div>
   );
 }

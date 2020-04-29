@@ -1,6 +1,6 @@
 const utils = require('@gnosis.pm/safe-contracts/test/utils/execution')
 const utilsg = require('@gnosis.pm/safe-contracts/test/utils/general')
-//const ethUtil = require('ethereumjs-util')
+const ethUtil = require('ethereumjs-util')
 
 const CreateAndAddModules = artifacts.require("CreateAndAddModules")
 const GnosisSafe = artifacts.require("GnosisSafe")
@@ -16,8 +16,11 @@ contract('ThreeBoxRecoveryModule', function(accounts) {
 
     beforeEach(async function () {
         // Create lightwallet        
-        // let privateKey = ethUtil.sha3('asdfasdfsadsadasdf')
-        // let address = ethUtil.privateToAddress(privateKey)
+        console.log(ethUtil)
+        let privateKey = ethUtil.sha256(Buffer.from('klasdhfsahdlf'))
+        console.log('privateKey',privateKey.toString('hex'))
+        let address = ethUtil.privateToAddress(privateKey)
+        console.log(address.toString('hex'))
 
         // Create Master Copies
         // console.log('1');
@@ -29,7 +32,7 @@ contract('ThreeBoxRecoveryModule', function(accounts) {
         gnosisSafeMasterCopy = await GnosisSafe.new()
         // console.log('1234');
         threeBoxRecoveryModuleMaster = await ThreeBoxRecoveryModule.deployed()
-        console.log('12345',threeBoxRecoveryModuleMaster.contract.methods);
+        // console.log('12345',threeBoxRecoveryModuleMaster.contract.methods);
         
         //Create Safe and Add module
         let moduleData = await threeBoxRecoveryModuleMaster.contract.methods.setup(accounts[5]).encodeABI()
@@ -65,9 +68,7 @@ contract('ThreeBoxRecoveryModule', function(accounts) {
     it ('should change owner for backup address', async () => {
         let sentinel = "0x0000000000000000000000000000000000000001"
         // let privateKey = ethUtil.sha3('asdfasdfsadsadasdf')
-        // let address = ethUtil.privateToAddress(privateKey)
-        let setRecoveryAddress = await threeBoxRecoveryModule.backupRecoveryAddress()
-        
+        // let address = ethUtil.privateToAddress(privateKey)        
         let recoverAccessData = await threeBoxRecoveryModule.recoverAccess(sentinel, accounts[0], accounts[5], {from: accounts[5]})
         assert.equal(await gnosisSafe.isOwner(accounts[5]), true);
         // Sign Transtion using Private Key

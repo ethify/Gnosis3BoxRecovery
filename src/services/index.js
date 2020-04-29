@@ -3,7 +3,6 @@ import * as Web3 from "web3";
 import CPK from 'contract-proxy-kit'
 
 let web3;
-let cpk;
 
 const onboard = Onboard({
   dappId: "052b3fe9-87d5-4614-b2e9-6dd81115979a", // [String] The API key created by step one above
@@ -15,10 +14,6 @@ const onboard = Onboard({
   },
 });
 
-export const getWeb3 = () => {
-  return web3
-}
-
 export const getAccount = async () => { 
   await onboard.walletSelect();
   await onboard.walletCheck();
@@ -27,11 +22,19 @@ export const getAccount = async () => {
   return currentState.address;
 };
 
+export const defaultAddress = async () => {
+  const currentState = onboard.getState()
+  return currentState.address
+}
+
+export const getBalance = (address) => {
+  return web3.eth.getBalance(address)
+}
+
 export const getCPK = async () => {
   if (!web3) {
     await getAccount()
   }
   const cpk = await CPK.create({ web3 });
-  console.log('cpk',cpk)
   return cpk
 }

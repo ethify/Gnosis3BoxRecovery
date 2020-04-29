@@ -11,7 +11,7 @@ contract ThreeBoxRecoveryModule is Module {
     string public constant NAME = "3Box Recovery Module";
     string public constant VERSION = "0.1.0";
 
-    address public backupRecoveryAddress;
+    address public backupAdminAddress;
     bool isRecoverable;
 
     modifier onlyBackup() {
@@ -23,7 +23,7 @@ contract ThreeBoxRecoveryModule is Module {
     public
     {
         setManager();
-        backupRecoveryAddress = _backupAddress;
+        backupAdminAddress = _backupAddress;
         isRecoverable = true;
     }
 
@@ -31,7 +31,7 @@ contract ThreeBoxRecoveryModule is Module {
         public
         onlyBackup
     {
-        require(msg.sender == backupRecoveryAddress, 'Not the correct backup Account');
+        require(msg.sender == backupAdminAddress, 'Not the correct backup Account');
         bytes memory data = abi.encodeWithSignature("swapOwner(address,address,address)", prevOwner, oldOwner, newOwner);
         require(manager.execTransactionFromModule(address(manager), 0, data, Enum.Operation.Call), "Could not execute recovery");
     }
