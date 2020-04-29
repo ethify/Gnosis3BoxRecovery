@@ -1,11 +1,12 @@
 import React from "react";
 import "./App.scss";
 import Header from "./components/Header";
-import { withRouter } from "react-router";
+import { withRouter, Route, Redirect } from "react-router";
 import Modal from "./components/Modal";
 import CreateSafeWidget from "./components/CreateSafeWidget";
 import SafeDetailsWidget from "./components/SafeDetailsWidget";
 import { getAccount } from './services'
+import RestoreSafeWidget from "./components/RestoreSafeWidget";
 
 class App extends React.Component {
   constructor(props) {
@@ -42,21 +43,8 @@ class App extends React.Component {
         }
       });
 
-      window.ethereum.on("networkChanged", async (changedChainId) => {});
+      window.ethereum.on("networkChanged", async (changedChainId) => { });
     }
-  };
-
-  async componentDidMount() {
-    this.routeAction();
-  }
-
-  routeAction = () => {
-    this.props.history.listen((location, action) => {
-      const page = location.pathname.split("/");
-      // console.log(page[page.length - 1]);
-      this.setState({ page: page[page.length - 1] });
-    });
-    this.props.history.push("/wallet");
   };
 
   render() {
@@ -74,12 +62,36 @@ class App extends React.Component {
           page={this.state.page}
           changePage={this.changePage}
         />
-        {this.state.page === "wallet" ? <CreateSafeWidget /> : null}
-        {this.state.page === "safe" ? (
-          <SafeDetailsWidget
-            address={"0x5d2629a9E885C5F0D558d6fE28A1f856ABdBDD54"}
-          />
-        ) : null}
+        <Route
+          path="/wallet"
+          exact
+          render={() => (
+            <CreateSafeWidget setAddress={this.changeAddress} address={this.state.address} />
+          )}
+        />
+
+        <Route
+          path="/wallet/safe"
+          exact
+          render={() => (
+            <SafeDetailsWidget
+              setAddress={this.changeAddress}
+              address={this.state.address}
+            />
+          )}
+        />
+        <Route
+          path="/recover"
+          exact
+          render={() => (
+            <RestoreSafeWidget
+              address={"0x5d2629a9E885C5F0D558d6fE28A1f856ABdBDD54"}
+            />
+          )}
+        />
+
+
+        <Route exact path="/" render={() => <Redirect to="/wallet" />} />
       </div>
     );
   }

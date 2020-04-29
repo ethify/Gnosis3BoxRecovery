@@ -1,12 +1,13 @@
 import React from "react";
 import "./header.scss";
 import { getAccount } from "../../services";
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 import makeBlockie from "ethereum-blockies-base64";
 import { shortenAddress } from "../../utils";
 
 function Header(props) {
   let history = useHistory();
+  let location = useLocation();
   const handleConnect = async () => {
     const address = await getAccount();
     props.setAddress(address);
@@ -42,16 +43,16 @@ function Header(props) {
         <div className="header-tab-container">
           <div
             className={`header-tab ${
-              props.page !== "recover" ? "tab-active" : null
-            }`}
+              location.pathname !== "/recover" ? "tab-active" : null
+              }`}
             onClick={(e) => history.push("/wallet")}
           >
             Wallet
           </div>
           <div
             className={`header-tab ${
-              props.page === "recover" ? "tab-active" : null
-            }`}
+              location.pathname === "/recover" ? "tab-active" : null
+              }`}
             onClick={(e) => history.push("/recover")}
           >
             Recover
