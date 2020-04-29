@@ -5,13 +5,8 @@ import { withRouter, Route, Redirect } from "react-router";
 import Modal from "./components/Modal";
 import CreateSafeWidget from "./components/CreateSafeWidget";
 import SafeDetailsWidget from "./components/SafeDetailsWidget";
-<<<<<<< HEAD
 import RecoverSafeWidget from "./components/RecoverSafeWidget";
-import { getAccount } from "./services";
-=======
-import { getAccount } from './services'
 import RestoreSafeWidget from "./components/RestoreSafeWidget";
->>>>>>> 2c61de7d11d52e825d16018da1b631558b27ec40
 
 class App extends React.Component {
   constructor(props) {
@@ -87,12 +82,13 @@ class App extends React.Component {
           path="/wallet/safe"
           exact
           render={() => (
-            <SafeDetailsWidget
-            address={"0x5d2629a9E885C5F0D558d6fE28A1f856ABdBDD54"}
-            cpk={this.state.cpk}
-            setModalConfig={this.setModalConfig}
-            setOpenModal={this.setOpenModal}
-          />
+            this.state.cpk ?
+              <SafeDetailsWidget
+                address={"0x5d2629a9E885C5F0D558d6fE28A1f856ABdBDD54"}
+                cpk={this.state.cpk}
+                setModalConfig={this.setModalConfig}
+                setOpenModal={this.setOpenModal}
+              /> : <Redirect to="/wallet" />
           )}
         />
         <Route

@@ -29,7 +29,7 @@
         flex-grow: 1;
         align-items: center;
         justify-content: center;
-        margin: 4em 0em;
+        margin: 3em 0em;
         .gnosis-safe-logo {
           height: 120px;
           width: 120px;
@@ -61,6 +61,23 @@
             font-size: 16px;
             margin-top: 0.75em;
             background: #3a34340f;
+            &:focus {
+              border: 1px solid var(--themeColor);
+            }
+          }
+        }
+
+        .safe-old-owner-container{
+          .safe-old-owner-input {
+            width: 70%;
+            outline: none;
+            border-radius: 6px;
+            border: 0px;
+            padding: 10px 12px;
+            font-size: 16px;
+            margin-top: 0.75em;
+            background: #3a34340f;
+
             &:focus {
               border: 1px solid var(--themeColor);
             }

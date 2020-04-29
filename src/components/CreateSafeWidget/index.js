@@ -20,7 +20,7 @@ function CreateSafeWidget(props) {
     const cpk = await getCPK();
     console.log("cpkkk", cpk);
     props.setCPK(cpk)
-    history.push('/safe')
+    history.push('/wallet/safe')
   }
 
   return (

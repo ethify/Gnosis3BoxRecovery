@@ -10,6 +10,7 @@ function RestoreSafeWidget(props) {
   let history = useHistory();
   const [loading, setLoading] = React.useState(true);
   const [safeAddress, setSafeAddress] = React.useState('');
+  const [safeOldOwner, setSafeOldOwner] = React.useState('');
   const [safeMasterKey, setSafeMasterKey] = React.useState('');
 
   React.useEffect(() => {
@@ -42,6 +43,9 @@ function RestoreSafeWidget(props) {
                 </div>
                 <div className="safe-address-container">
                   <input type="text" className="safe-address-input" value={safeAddress} onChange={e => setSafeAddress(e.target.value)} placeholder="Enter safe address" />
+                </div>
+                <div className="safe-old-owner-container">
+                  <input type="text" className="safe-old-owner-input" value={safeOldOwner} onChange={e => setSafeOldOwner(e.target.value)} placeholder="Enter Old Safe Owner Address" />
                 </div>
                 <div className="safe-master-key-container">
                   <input type="password" className="safe-master-key-input" value={safeMasterKey} onChange={e => setSafeMasterKey(e.target.value)} placeholder="Enter your master key to recover" />
