@@ -131,39 +131,15 @@ function Modal(props) {
           <FontAwesomeIcon icon={faTimes} />
         </button>
         <div className="modal-guts">
-          <div>
-            <div className="modal-loader">
-              {props.config.status === "pending" ? (
-                <Loader loaderType="circle" />
-              ) : null}
-              {props.config.status === "success" ? (
-                <div className="icon-container">
-                  <FontAwesomeIcon
-                    icon={faCheckCircle}
-                    className="success-icon"
-                  />
-                </div>
-              ) : null}
-              {props.config.status === "fail" ? (
-                <div className="icon-container">
-                  <FontAwesomeIcon icon={faTimesCircle} className="fail-icon" />
-                </div>
-              ) : null}
-            </div>
-          </div>
           {props.config.type === "setUpRecovery" ? (
-            <div>
-              <div
-                className={`modal-title ${
-                  props.config.status === "fail" ? "fail" : "success"
-                }`}
-              >
-                {props.config.title}
-              </div>
-              <h4>Please Send some ETH to the safe before this transaction</h4>
+            <div className="modal-recovery">
+              <div className="modal-title">{props.config.title}</div>
+              <h4 className="modal-desc">
+                Please Send some ETH to the safe before this transaction
+              </h4>
               <div className="modal-message">
                 <input
-                  className="input is-primary"
+                  className="user-secret-input"
                   type="text"
                   placeholder="Primary input"
                   onChange={(e) => {
@@ -172,7 +148,7 @@ function Modal(props) {
                 />
                 <button
                   type="button"
-                  className="create-button"
+                  className="user-secret-add-button"
                   onClick={submitBackup}
                 >
                   <FontAwesomeIcon icon={faKey} />
@@ -182,6 +158,29 @@ function Modal(props) {
             </div>
           ) : (
             <div>
+              <div>
+                <div className="modal-loader">
+                  {props.config.status === "pending" ? (
+                    <Loader loaderType="circle" />
+                  ) : null}
+                  {props.config.status === "success" ? (
+                    <div className="icon-container">
+                      <FontAwesomeIcon
+                        icon={faCheckCircle}
+                        className="success-icon"
+                      />
+                    </div>
+                  ) : null}
+                  {props.config.status === "fail" ? (
+                    <div className="icon-container">
+                      <FontAwesomeIcon
+                        icon={faTimesCircle}
+                        className="fail-icon"
+                      />
+                    </div>
+                  ) : null}
+                </div>
+              </div>
               <div
                 className={`modal-title ${
                   props.config.status === "fail" ? "fail" : "success"

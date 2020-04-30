@@ -74,6 +74,56 @@
     text-align: center;
     font-size: 18px;
   }
+
+  .modal-recovery {
+    padding: 2em;
+    .modal-title {
+      font-size: 36px;
+      font-weight: 800;
+      margin: 18px 0px;
+      text-align: center;
+    }
+    .modal-desc {
+      text-align: center;
+      margin-top: 5em;
+    }
+    .modal-message {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0px 2em;
+      .user-secret-input {
+        outline: none;
+        flex-grow: 0.5;
+        border-radius: 6px 0px 0px 6px;
+        border-top: 1px solid #b1b1b1;
+        border-bottom: 1px solid #b1b1b1;
+        border-left: 1px solid #b1b1b1;
+        border-right: 0px;
+        padding: 8px 12px;
+        font-size: 16px;
+      }
+
+      .user-secret-add-button {
+        background: var(--themeColor);
+        color: white;
+        padding: 6px 15px;
+        height: 37px;
+        border-radius: 0px 6px 6px 0px;
+        font-size: 16px;
+        outline: none;
+        border: 1px;
+        cursor: pointer;
+
+        &:hover {
+          background: var(--themeColorDark);
+        }
+        span {
+          margin-left: 6px;
+        }
+      }
+    }
+  }
 }
 
 .modal .close-button {
