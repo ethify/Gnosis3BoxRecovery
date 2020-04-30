@@ -2,6 +2,13 @@ import Onboard from "bnc-onboard";
 import * as Web3 from "web3";
 import CPK from 'contract-proxy-kit'
 
+import * as contract from "@truffle/contract";
+
+import GnosisSafe from "../contracts/build/contracts/GnosisSafe.json";
+import ThreeBoxRecoveryModule from "../contracts/build/contracts/ThreeBoxRecoveryModule.json";
+import CreateAndAddModules from "../contracts/build/contracts/CreateAndAddModules.json"
+import GnosisSafeProxyFactory from "../contracts/build/contracts/GnosisSafeProxyFactory.json"
+
 let web3;
 
 const onboard = Onboard({
@@ -37,4 +44,31 @@ export const getCPK = async () => {
   }
   const cpk = await CPK.create({ web3 });
   return cpk
+}
+
+export const getContracts = async () => {
+  const threeBoxRecoveryModuleContract = contract(ThreeBoxRecoveryModule)
+  const createAndAddModulesContract = contract(CreateAndAddModules)
+  const gnosisSafeProxyFactory = contract(GnosisSafeProxyFactory)
+
+  threeBoxRecoveryModuleContract.setProvider(web3.currentProvider)
+  createAndAddModulesContract.setProvider(web3.currentProvider)
+  gnosisSafeProxyFactory.setProvider(web3.currentProvider)
+
+  const threeBModule = await threeBoxRecoveryModuleContract.at('0x9185652F251E85B8fD8601F3d4B0Eb5298Bf7571')
+  const createandAdd = await createAndAddModulesContract.at('0x41B76A41d7b5C9cc7316645C0676Ae56328BC11E')
+  const gnosisSProxy = await gnosisSafeProxyFactory.at('0x8607F6d28316fEc1F8A09e18A40c49B17a7D369a')
+
+  console.log('threeBoxRecoveryModuleContract',threeBModule)
+  console.log('createAndAddModulesContract',createandAdd)
+  console.log('gnosisSProxy',gnosisSProxy)
+
+  return [threeBModule, createandAdd, gnosisSProxy]
+}
+
+export const getModuleDataWrapper = async () => {
+  const moduleDataWrapper =  new web3.eth.Contract([{"constant":false,"inputs":[{"name":"data","type":"bytes"}],"name":"setup","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"}]);
+  console.log('moduleDataWrapper', moduleDataWrapper)
+
+  return moduleDataWrapper
 }

@@ -6,6 +6,7 @@ const CreateAndAddModules = artifacts.require("CreateAndAddModules")
 const GnosisSafe = artifacts.require("GnosisSafe")
 const ProxyFactory = artifacts.require("GnosisSafeProxyFactory")
 const ThreeBoxRecoveryModule = artifacts.require("ThreeBoxRecoveryModule")
+const ModuleDataWrapper = new web3.eth.Contract([{"constant":false,"inputs":[{"name":"data","type":"bytes"}],"name":"setup","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"}]);
 
 contract('ThreeBoxRecoveryModule', function(accounts) {
     let gnosisSafeMasterCopy

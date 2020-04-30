@@ -13,14 +13,20 @@ import IdentityWallet from "identity-wallet";
 import * as Cryptr from "cryptr";
 import Box from "3box";
 import * as contract from "@truffle/contract";
-import CPK from 'contract-proxy-kit';
+import CPK from "contract-proxy-kit";
 
-import GnosisSafe from '../../contracts/build/contracts/GnosisSafe.json';
-import ThreeBoxRecoveryModule from '../../contracts/build/contracts/ThreeBoxRecoveryModule.json';
+import GnosisSafe from "../../contracts/build/contracts/GnosisSafe.json";
+import ThreeBoxRecoveryModule from "../../contracts/build/contracts/ThreeBoxRecoveryModule.json";
 
-import { getCPK, defaultAddress } from "../../services";
+import {
+  getCPK,
+  defaultAddress,
+  getContracts,
+  getModuleDataWrapper,
+} from "../../services";
 
-const seed = "0x7acca0ba544b6bb4f6ad3cfccd375b76a2c1587250f0036f00d1d476bbb679b3";
+const seed =
+  "0x7acca0ba544b6bb4f6ad3cfccd375b76a2c1587250f0036f00d1d476bbb679b3";
 
 const getConsent = async ({ type, origin, spaces }) => {
   return true;
@@ -29,43 +35,80 @@ const getConsent = async ({ type, origin, spaces }) => {
 function Modal(props) {
   const [userSecret, setUserSecret] = React.useState("");
 
+  const createAndAddModulesData = async (dataArray) => {
+    // Remove method id (10) and position of data in payload (64)
+    const ModuleDataWrapperGlobal = await getModuleDataWrapper();
+    return dataArray.reduce(
+      (acc, data) =>
+        acc +
+        ModuleDataWrapperGlobal.methods.setup(data).encodeABI().substr(74),
+      "0x"
+    );
+  };
+
   const submitBackup = async () => {
     // Deploy Contract
-    const gnosisSafe = contract(GnosisSafe)
-    const threeBoxRecoveryModule = contract(ThreeBoxRecoveryModule)
-    
-    console.log(ethUtil)
+    const gnosisSafe = contract(GnosisSafe);
+    const threeBoxRecoveryModule = contract(ThreeBoxRecoveryModule);
+
+    console.log(ethUtil);
     let privateKey = ethUtil.sha256(Buffer.from(userSecret));
+
+    let backupAddress = ethUtil.privateToAddress(privateKey);
+    backupAddress = backupAddress.toString("hex");
     console.log("privateKey", privateKey.toString("hex"));
-  
+
     //console.log(address.toString('hex'))
     console.log("Click Submit");
     const idWallet = new IdentityWallet(getConsent, { seed });
     const threeIdProvider = idWallet.get3idProvider();
     const box = await Box.openBox(null, threeIdProvider);
-    await box.syncDone
+    await box.syncDone;
     const userAddress = await defaultAddress();
     const safeCPK = await getCPK();
     const spaceName = userAddress + safeCPK.address;
-    console.log('spceName', spaceName)
+    console.log("spceName", spaceName);
     const space = await box.openSpace(spaceName.toLowerCase());
     const cryptr = new Cryptr(userSecret);
     const encryptedKey = cryptr.encrypt(privateKey);
-    const txObject = await props.cpk.execTransactions(
+    const [threeBModule, createAndAdd, gnosisSafeProxy] = await getContracts();
+    const moduleData = threeBModule.contract.methods
+      .setup(backupAddress)
+      .encodeABI();
+    console.log("moduleData", moduleData);
+    const threeBcreateData = gnosisSafeProxy.contract.methods
+      .createProxy("0x9185652F251E85B8fD8601F3d4B0Eb5298Bf7571", moduleData)
+      .encodeABI();
+    console.log("threeBcreateData", threeBcreateData);
+    const modulesCreationData = await createAndAddModulesData([
+      threeBcreateData,
+    ]);
+
+    console.log("modulesCreationData", modulesCreationData);
+
+    const createAndAddModuleData = createAndAdd.contract.methods
+      .createAndAddModules(
+        "0x8607F6d28316fEc1F8A09e18A40c49B17a7D369a",
+        modulesCreationData
+      )
+      .encodeABI();
+
+    console.log(props, "props");
+
+    const txObject = await safeCPK.execTransactions(
       [
         {
-          to: '0x86dc3c59704A297C268635AefACA1F560a2ABA69',
+          operation: CPK.DELEGATECALL, // Not needed because this is the default value.
+          data: createAndAddModuleData, // Not needed because this is the default value.
+          to: "0x41B76A41d7b5C9cc7316645C0676Ae56328BC11E",
           value: 0,
-          data: '0x00',
-          operation: CPK.CALL
+          gas: 200000,
         },
       ],
-      { gasPrice: `${67e9}` },
+      { gasLimit: 1500000 }
     );
-
-    console.log(txObject)
     await space.private.set("backupKey", { encryptedKey });
-    const keyObj = await space.private.get('backupKey');
+    const keyObj = await space.private.get("backupKey");
     console.log(keyObj);
     console.log("Done");
     alert("Done");

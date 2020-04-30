@@ -14,8 +14,11 @@ import CPK from "contract-proxy-kit";
 
 import GnosisSafe from "../../contracts/build/contracts/GnosisSafe.json";
 import ThreeBoxRecoveryModule from "../../contracts/build/contracts/ThreeBoxRecoveryModule.json";
+import CreateAndAddModules from "../../contracts/build/contracts/CreateAndAddModules.json"
 
-import { getCPK, defaultAddress } from "../../services";
+import {
+  getCPK,
+} from "../../services";
 
 const seed = "0x7acca0ba544b6bb4f6ad3cfccd375b76a2c1587250f0036f00d1d476bbb679b3";
 
@@ -57,6 +60,13 @@ function RecoverSafeWidget(props) {
     const decryptedBackupKey = cryptr.decrypt(backupKey.encryptedKey);
     console.log('decryptedKye', decryptedBackupKey.toString('hex'));
   };
+
+  const recoverSafeTest = async () => {
+    const threeBoxRecoveryModuleContract = contract(ThreeBoxRecoveryModule)
+    const createAndAddModulesContract = contract(CreateAndAddModules)
+
+    console.log('threeBoxRecoveryModuleContract',threeBoxRecoveryModuleContract)
+  }
 
   return (
     <div className="recover-safe-widget">
@@ -106,6 +116,15 @@ function RecoverSafeWidget(props) {
               >
                 <FontAwesomeIcon icon={faPlus} />
                 <span>Recover Safe</span>
+              </button>
+
+              <button
+                type="button"
+                className="recover-button"
+                onClick={recoverSafeTest}
+              >
+                <FontAwesomeIcon icon={faPlus} />
+                <span>Recover Safe Test</span>
               </button>
             </div>
           </div>

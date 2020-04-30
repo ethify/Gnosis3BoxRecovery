@@ -95,7 +95,7 @@ class App extends React.Component {
           path="/recover"
           exact
           render={() => (
-            <RecoverSafeWidget></RecoverSafeWidget>
+            <RestoreSafeWidget cpk={this.state.cpk}></RestoreSafeWidget>
           )}
         />
 
