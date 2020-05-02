@@ -1,3 +1,41 @@
+# Name of Project
+Gnosis Safe Recovery using 3Box
+
+## Project Description
+
+The project leverages the security and composability of 3box to store a backup key made for the Gnosis Safe. 
+
+There is No need to remember long mnemonics, Private Key or Question and Answers as All that user needs is a `Key` or `Password` in general terms to recover his/her precious assests. 
+
+This app keeps the backup key in a safe 3Box confidenital thread in encrypted form. This helps keeping the privacy and anonimity of user's key. 
+
+Gnosis's Safe Contract Proxy Kit is Used to create a new safe for user and do all the transactions.
+
+### Features 
+
+- Create a New Safe using CPK
+- Add Recovery Module and configure 3box
+- Recovery Safe and set new owners
+- Beautiful UI and consistent User Experience
+
+## Project Team
+    
+```
+Mitrasish Mukherjee
+@rekpero
+```
+```
+Manank Patni
+@manankpatni
+```
+
+## A prototype (code or no-code)
+https://gitlab.com/ethifylabs/gnosisthreeboxrecovery/
+## Github Repo
+https://gitlab.com/ethifylabs/gnosisthreeboxrecovery/
+## Video Demo
+https://youtu.be/oZpgLr-5Jis
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
