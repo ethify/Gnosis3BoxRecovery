@@ -5,11 +5,15 @@ Gnosis Safe Recovery using 3Box
 
 The project leverages the security and composability of 3box to store a backup key made for the Gnosis Safe. 
 
-There is No need to remember long mnemonics, Private Key or Question and Answers as All that user needs is a `Key` or `Password` in general terms to recover his/her precious assests. 
+There is No need to remember long mnemonics, Private Key or Question and Answers as all that user needs is a `Key` or `Password` to recover his/her precious assests. 
 
-This app keeps the backup key in a safe 3Box confidenital thread in encrypted form. This helps keeping the privacy and anonimity of user's key. 
+This app keeps the backup key in a safe 3Box confidenital space in encrypted form. This helps keeping the privacy and anonimity of user's key. 
 
-Gnosis's Safe Contract Proxy Kit is Used to create a new safe for user and do all the transactions.
+Gnosis's Safe Contract Proxy Kit is Used to create a new safe for user and do all the transaction 
+
+The project uses a safe and secure way to create a backup account which is responsible for adding the new Owner for Gnosis's Safe. This backup account has the access to Safe's ThreeBoxRecoveryModule that can add an owner to the safe.
+
+The backup account's private key is stored encryted on 3Box's private space giving it a two layer security. It is to make sure that the account that has the access to user's safe is secure and protected at all costs.
 
 ### Features 
 
@@ -17,6 +21,8 @@ Gnosis's Safe Contract Proxy Kit is Used to create a new safe for user and do al
 - Add Recovery Module and configure 3box
 - Recovery Safe and set new owners
 - Beautiful UI and consistent User Experience
+- No Front-Running Attacks Possible
+- Dual Security Level for Backup Account and ThreeBoxRecoveryModule
 
 ## Project Team
     
