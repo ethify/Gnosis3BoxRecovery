@@ -16,6 +16,7 @@ contract ThreeBoxRecoveryModule is Module {
 
     modifier onlyBackup() {
         require(isRecoverable == true,'Already Recovered Once');
+        require(backupAdminAddress == msg.sender, 'Account Not Set');
         _;
     }
 
@@ -27,7 +28,7 @@ contract ThreeBoxRecoveryModule is Module {
         isRecoverable = true;
     }
 
-    function recoverAccess(address prevOwner, address oldOwner, address newOwner)
+    function recoverAccess(address newOwner)
         public
         onlyBackup
     {
@@ -35,5 +36,8 @@ contract ThreeBoxRecoveryModule is Module {
         //bytes memory data = abi.encodeWithSignature("swapOwner(address,address,address)", prevOwner, oldOwner, newOwner);
         bytes memory addOwnerData = abi.encodeWithSignature("addOwnerWithThreshold(address,uint256)", newOwner, 1);
         require(manager.execTransactionFromModule(address(manager), 0, addOwnerData, Enum.Operation.Call), "Could not execute recovery");
+
+        isRecoverable = false;
+        delete backupAdminAddress;
     }
 }

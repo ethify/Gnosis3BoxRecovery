@@ -46,6 +46,13 @@ export const getCPK = async () => {
   return cpk
 }
 
+export const getWeb3 = async () => {
+  if (!web3) {
+    await getAccount()
+  }
+  return web3
+}
+
 export const getContracts = async () => {
   const threeBoxRecoveryModuleContract = contract(ThreeBoxRecoveryModule)
   const createAndAddModulesContract = contract(CreateAndAddModules)
@@ -64,6 +71,30 @@ export const getContracts = async () => {
   console.log('gnosisSProxy',gnosisSProxy)
 
   return [threeBModule, createandAdd, gnosisSProxy]
+}
+
+export const getThreeBoxModule = async () => {
+  const threeBoxRecoveryModuleContract = contract(ThreeBoxRecoveryModule)
+  threeBoxRecoveryModuleContract.setProvider(web3.currentProvider)
+
+  const threeBModule = await threeBoxRecoveryModuleContract.deployed()
+
+  return threeBModule
+}
+
+export const getContractsRecovery = async (cpk) => {
+  const threeBoxRecoveryModule = contract(ThreeBoxRecoveryModule)
+  const gnosisSafe = contract(GnosisSafe)
+
+  gnosisSafe.setProvider(web3.currentProvider)
+  threeBoxRecoveryModule.setProvider(web3.currentProvider)
+
+  let gnosisSafeContract = await gnosisSafe.at(cpk.masterCopyAddress)
+
+  console.log('web3address', web3.givenProvider.selectedAddress)
+  let threeBoxRecoveryModuleContract = await threeBoxRecoveryModule.new({from: web3.givenProvider.selectedAddress})
+
+  return [gnosisSafeContract, threeBoxRecoveryModuleContract]
 }
 
 export const getModuleDataWrapper = async () => {
