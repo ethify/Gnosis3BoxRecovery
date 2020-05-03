@@ -14,6 +14,7 @@
     "@testing-library/user-event": "^7.1.2",
     "@truffle/contract": "^4.2.2",
     "bnc-onboard": "^1.7.6",
+    "clipboard-copy": "^3.1.0",
     "contract-proxy-kit": "^1.1.1",
     "cryptr": "^6.0.2",
     "ethereum-blockies-base64": "^1.0.2",

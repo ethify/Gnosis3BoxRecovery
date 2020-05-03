@@ -80,6 +80,70 @@
     .modal-title {
       font-size: 36px;
       font-weight: 800;
+      margin: 0px;
+      text-align: center;
+    }
+    .modal-desc {
+      text-align: center;
+    }
+    .modal-message {
+      text-align: left;
+
+      .backup-account-details {
+        padding: 4px 8px;
+        border: 1px solid var(--labelColor);
+        border-radius: 8px;
+        background-color: var(--bodyBg);
+        margin: 8px 0px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        &:active {
+          background-color: darken(#c7c7c7, 15);
+        }
+
+        .backup-account-details-item {
+          overflow: hidden;
+          flex-grow: 1;
+
+          .backup-account-details-item-data {
+            text-overflow: ellipsis;
+            overflow: hidden;
+          }
+        }
+      }
+
+      .start-recover-button-container {
+        text-align: center;
+
+        .user-secret-add-button {
+          background: var(--themeColor);
+          color: white;
+          padding: 6px 15px;
+          height: 37px;
+          border-radius: 6px;
+          font-size: 16px;
+          outline: none;
+          border: 1px;
+          cursor: pointer;
+
+          &:hover {
+            background: var(--themeColorDark);
+          }
+          span {
+            margin-left: 6px;
+          }
+        }
+      }
+    }
+  }
+
+  .modal-recovery-setup {
+    padding: 2em;
+    .modal-title {
+      font-size: 36px;
+      font-weight: 800;
       margin: 18px 0px;
       text-align: center;
     }

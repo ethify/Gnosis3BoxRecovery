@@ -5,8 +5,8 @@ import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { useHistory } from "react-router-dom";
 import Loader from "../Loader";
 import { getAccount } from "../../services";
-import Box from '3box';
-import { getCPK } from '../../services';
+import Box from "3box";
+import { getCPK } from "../../services";
 
 function CreateSafeWidget(props) {
   let history = useHistory();
@@ -17,11 +17,11 @@ function CreateSafeWidget(props) {
   }, []);
 
   const createNewSafe = async () => {
-    const cpk = await getCPK();
+    const cpk = await getCPK(props.setAddress);
     console.log("cpkkk", cpk);
-    props.setCPK(cpk)
-    history.push('/wallet/safe')
-  }
+    props.setCPK(cpk);
+    history.push("/wallet/safe");
+  };
 
   return (
     <div className="create-safe-widget">
@@ -29,25 +29,25 @@ function CreateSafeWidget(props) {
         {loading ? (
           <Loader loaderType="box" />
         ) : (
-            <div className="create-safe-container">
-              <div className="logo-container">
-                <img
-                  src={require("../../assets/icons/gnosis_safe_logo.png")}
-                  alt="safe logo"
-                  className="gnosis-safe-logo"
-                />
-              </div>
-              <div className="create-button-container">
-                <h2 className="create-safe-title">Welcome to Gnosis Safe</h2>
-                <button
-                  type="button"
-                  className="create-button"
-                  onClick={createNewSafe}
-                >
-                  <FontAwesomeIcon icon={faPlus} />
-                  <span>Create new Safe</span>
-                </button>
-                {/* <button
+          <div className="create-safe-container">
+            <div className="logo-container">
+              <img
+                src={require("../../assets/icons/gnosis_safe_logo.png")}
+                alt="safe logo"
+                className="gnosis-safe-logo"
+              />
+            </div>
+            <div className="create-button-container">
+              <h2 className="create-safe-title">Welcome to Gnosis Safe</h2>
+              <button
+                type="button"
+                className="create-button"
+                onClick={createNewSafe}
+              >
+                <FontAwesomeIcon icon={faPlus} />
+                <span>Create new Safe</span>
+              </button>
+              {/* <button
                 type="button"
                 className="create-button"
                 onClick={testFunction}
@@ -55,9 +55,9 @@ function CreateSafeWidget(props) {
                 <FontAwesomeIcon icon={faPlus} />
                 <span>Testing</span>
               </button> */}
-              </div>
             </div>
-          )}
+          </div>
+        )}
       </div>
     </div>
   );

@@ -9,8 +9,7 @@ function Header(props) {
   let history = useHistory();
   let location = useLocation();
   const handleConnect = async () => {
-    const address = await getAccount();
-    props.setAddress(address);
+    await getAccount(props.setAddress);
   };
 
   const getAddressTemplate = (address) => {
@@ -29,7 +28,7 @@ function Header(props) {
       return <div>Connect to Wallet</div>;
     }
   };
-  
+
   return (
     <div className="header">
       <div className="header-first-container">
@@ -46,7 +45,7 @@ function Header(props) {
           <div
             className={`header-tab ${
               location.pathname !== "/recover" ? "tab-active" : null
-              }`}
+            }`}
             onClick={(e) => history.push("/wallet")}
           >
             Wallet
@@ -54,7 +53,7 @@ function Header(props) {
           <div
             className={`header-tab ${
               location.pathname === "/recover" ? "tab-active" : null
-              }`}
+            }`}
             onClick={(e) => history.push("/recover")}
           >
             Recover

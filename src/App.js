@@ -48,7 +48,7 @@ class App extends React.Component {
         }
       });
 
-      window.ethereum.on("networkChanged", async (changedChainId) => { });
+      window.ethereum.on("networkChanged", async (changedChainId) => {});
     }
   };
 
@@ -61,6 +61,7 @@ class App extends React.Component {
             setOpenModal={this.setOpenModal}
             openModal={this.state.openModal}
             config={this.state.modalConfig}
+            setModalConfig={this.setModalConfig}
             cpk={this.state.cpk}
           />
         }
@@ -74,31 +75,40 @@ class App extends React.Component {
           path="/wallet"
           exact
           render={() => (
-            <CreateSafeWidget setCPK={this.setcpk} />
+            <CreateSafeWidget
+              setCPK={this.setcpk}
+              setAddress={this.changeAddress}
+            />
           )}
         />
 
         <Route
           path="/wallet/safe"
           exact
-          render={() => (
-            this.state.cpk ?
+          render={() =>
+            this.state.cpk ? (
               <SafeDetailsWidget
-                address={"0x5d2629a9E885C5F0D558d6fE28A1f856ABdBDD54"}
+                address={this.state.cpk.address}
                 cpk={this.state.cpk}
                 setModalConfig={this.setModalConfig}
                 setOpenModal={this.setOpenModal}
-              /> : <Redirect to="/wallet" />
-          )}
+              />
+            ) : (
+              <Redirect to="/wallet" />
+            )
+          }
         />
         <Route
           path="/recover"
           exact
           render={() => (
-            <RestoreSafeWidget cpk={this.state.cpk}></RestoreSafeWidget>
+            <RestoreSafeWidget
+              cpk={this.state.cpk}
+              setModalConfig={this.setModalConfig}
+              setOpenModal={this.setOpenModal}
+            ></RestoreSafeWidget>
           )}
         />
-
 
         <Route exact path="/" render={() => <Redirect to="/wallet" />} />
       </div>
