@@ -32,7 +32,8 @@ contract ThreeBoxRecoveryModule is Module {
         onlyBackup
     {
         require(msg.sender == backupAdminAddress, 'Not the correct backup Account');
-        bytes memory data = abi.encodeWithSignature("swapOwner(address,address,address)", prevOwner, oldOwner, newOwner);
-        require(manager.execTransactionFromModule(address(manager), 0, data, Enum.Operation.Call), "Could not execute recovery");
+        //bytes memory data = abi.encodeWithSignature("swapOwner(address,address,address)", prevOwner, oldOwner, newOwner);
+        bytes memory addOwnerData = abi.encodeWithSignature("addOwnerWithThreshold(address,uint256)", newOwner, 1);
+        require(manager.execTransactionFromModule(address(manager), 0, addOwnerData, Enum.Operation.Call), "Could not execute recovery");
     }
 }

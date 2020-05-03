@@ -12,14 +12,14 @@
     "absolutePath": "@gnosis.pm/safe-contracts/contracts/common/SelfAuthorized.sol",
     "exportedSymbols": {
       "SelfAuthorized": [
-        2168
+        2167
       ]
     },
-    "id": 2169,
+    "id": 2168,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2153,
+        "id": 2152,
         "literals": [
           "solidity",
           ">=",
@@ -38,16 +38,16 @@
         "contractKind": "contract",
         "documentation": "@title SelfAuthorized - authorizes current contract to perform actions\n @author Richard Meissner - <richard@gnosis.pm>",
         "fullyImplemented": true,
-        "id": 2168,
+        "id": 2167,
         "linearizedBaseContracts": [
-          2168
+          2167
         ],
         "name": "SelfAuthorized",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 2166,
+              "id": 2165,
               "nodeType": "Block",
               "src": "212:112:12",
               "statements": [
@@ -61,7 +61,7 @@
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         },
-                        "id": 2161,
+                        "id": 2160,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -70,18 +70,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 2156,
+                            "id": 2155,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2697,
+                            "referencedDeclaration": 2696,
                             "src": "230:3:12",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 2157,
+                          "id": 2156,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -102,14 +102,14 @@
                           "arguments": [
                             {
                               "argumentTypes": null,
-                              "id": 2159,
+                              "id": 2158,
                               "name": "this",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 2713,
+                              "referencedDeclaration": 2712,
                               "src": "252:4:12",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_SelfAuthorized_$2168",
+                                "typeIdentifier": "t_contract$_SelfAuthorized_$2167",
                                 "typeString": "contract SelfAuthorized"
                               }
                             }
@@ -117,11 +117,11 @@
                           "expression": {
                             "argumentTypes": [
                               {
-                                "typeIdentifier": "t_contract$_SelfAuthorized_$2168",
+                                "typeIdentifier": "t_contract$_SelfAuthorized_$2167",
                                 "typeString": "contract SelfAuthorized"
                               }
                             ],
-                            "id": 2158,
+                            "id": 2157,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
@@ -134,7 +134,7 @@
                             },
                             "typeName": "address"
                           },
-                          "id": 2160,
+                          "id": 2159,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -157,7 +157,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "4d6574686f642063616e206f6e6c792062652063616c6c65642066726f6d207468697320636f6e7472616374",
-                        "id": 2162,
+                        "id": 2161,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -184,21 +184,21 @@
                           "typeString": "literal_string \"Method can only be called from this contract\""
                         }
                       ],
-                      "id": 2155,
+                      "id": 2154,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        2700,
-                        2701
+                        2699,
+                        2700
                       ],
-                      "referencedDeclaration": 2701,
+                      "referencedDeclaration": 2700,
                       "src": "222:7:12",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 2163,
+                    "id": 2162,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -212,23 +212,23 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 2164,
+                  "id": 2163,
                   "nodeType": "ExpressionStatement",
                   "src": "222:84:12"
                 },
                 {
-                  "id": 2165,
+                  "id": 2164,
                   "nodeType": "PlaceholderStatement",
                   "src": "316:1:12"
                 }
               ]
             },
             "documentation": null,
-            "id": 2167,
+            "id": 2166,
             "name": "authorized",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 2154,
+              "id": 2153,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "209:2:12"
@@ -237,7 +237,7 @@
             "visibility": "internal"
           }
         ],
-        "scope": 2169,
+        "scope": 2168,
         "src": "160:166:12"
       }
     ],
@@ -247,14 +247,14 @@
     "absolutePath": "@gnosis.pm/safe-contracts/contracts/common/SelfAuthorized.sol",
     "exportedSymbols": {
       "SelfAuthorized": [
-        2168
+        2167
       ]
     },
-    "id": 2169,
+    "id": 2168,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2153,
+        "id": 2152,
         "literals": [
           "solidity",
           ">=",
@@ -273,16 +273,16 @@
         "contractKind": "contract",
         "documentation": "@title SelfAuthorized - authorizes current contract to perform actions\n @author Richard Meissner - <richard@gnosis.pm>",
         "fullyImplemented": true,
-        "id": 2168,
+        "id": 2167,
         "linearizedBaseContracts": [
-          2168
+          2167
         ],
         "name": "SelfAuthorized",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 2166,
+              "id": 2165,
               "nodeType": "Block",
               "src": "212:112:12",
               "statements": [
@@ -296,7 +296,7 @@
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         },
-                        "id": 2161,
+                        "id": 2160,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -305,18 +305,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 2156,
+                            "id": 2155,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2697,
+                            "referencedDeclaration": 2696,
                             "src": "230:3:12",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 2157,
+                          "id": 2156,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -337,14 +337,14 @@
                           "arguments": [
                             {
                               "argumentTypes": null,
-                              "id": 2159,
+                              "id": 2158,
                               "name": "this",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 2713,
+                              "referencedDeclaration": 2712,
                               "src": "252:4:12",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_SelfAuthorized_$2168",
+                                "typeIdentifier": "t_contract$_SelfAuthorized_$2167",
                                 "typeString": "contract SelfAuthorized"
                               }
                             }
@@ -352,11 +352,11 @@
                           "expression": {
                             "argumentTypes": [
                               {
-                                "typeIdentifier": "t_contract$_SelfAuthorized_$2168",
+                                "typeIdentifier": "t_contract$_SelfAuthorized_$2167",
                                 "typeString": "contract SelfAuthorized"
                               }
                             ],
-                            "id": 2158,
+                            "id": 2157,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
@@ -369,7 +369,7 @@
                             },
                             "typeName": "address"
                           },
-                          "id": 2160,
+                          "id": 2159,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -392,7 +392,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "4d6574686f642063616e206f6e6c792062652063616c6c65642066726f6d207468697320636f6e7472616374",
-                        "id": 2162,
+                        "id": 2161,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -419,21 +419,21 @@
                           "typeString": "literal_string \"Method can only be called from this contract\""
                         }
                       ],
-                      "id": 2155,
+                      "id": 2154,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        2700,
-                        2701
+                        2699,
+                        2700
                       ],
-                      "referencedDeclaration": 2701,
+                      "referencedDeclaration": 2700,
                       "src": "222:7:12",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 2163,
+                    "id": 2162,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -447,23 +447,23 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 2164,
+                  "id": 2163,
                   "nodeType": "ExpressionStatement",
                   "src": "222:84:12"
                 },
                 {
-                  "id": 2165,
+                  "id": 2164,
                   "nodeType": "PlaceholderStatement",
                   "src": "316:1:12"
                 }
               ]
             },
             "documentation": null,
-            "id": 2167,
+            "id": 2166,
             "name": "authorized",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 2154,
+              "id": 2153,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "209:2:12"
@@ -472,7 +472,7 @@
             "visibility": "internal"
           }
         ],
-        "scope": 2169,
+        "scope": 2168,
         "src": "160:166:12"
       }
     ],
@@ -484,7 +484,7 @@
   },
   "networks": {},
   "schemaVersion": "3.1.0",
-  "updatedAt": "2020-04-24T22:40:49.061Z",
+  "updatedAt": "2020-05-03T08:41:51.001Z",
   "devdoc": {
     "author": "Richard Meissner - <richard@gnosis.pm>",
     "methods": {},

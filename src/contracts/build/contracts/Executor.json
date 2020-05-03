@@ -12,14 +12,14 @@
     "absolutePath": "@gnosis.pm/safe-contracts/contracts/base/Executor.sol",
     "exportedSymbols": {
       "Executor": [
-        1140
+        1139
       ]
     },
-    "id": 1141,
+    "id": 1140,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1061,
+        "id": 1060,
         "literals": [
           "solidity",
           ">=",
@@ -35,10 +35,10 @@
       {
         "absolutePath": "@gnosis.pm/safe-contracts/contracts/common/Enum.sol",
         "file": "../common/Enum.sol",
-        "id": 1062,
+        "id": 1061,
         "nodeType": "ImportDirective",
-        "scope": 1141,
-        "sourceUnit": 2090,
+        "scope": 1140,
+        "sourceUnit": 2089,
         "src": "32:28:4",
         "symbolAliases": [],
         "unitAlias": ""
@@ -49,16 +49,16 @@
         "contractKind": "contract",
         "documentation": "@title Executor - A contract that can execute transactions\n @author Richard Meissner - <richard@gnosis.pm>",
         "fullyImplemented": true,
-        "id": 1140,
+        "id": 1139,
         "linearizedBaseContracts": [
-          1140
+          1139
         ],
         "name": "Executor",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 1110,
+              "id": 1109,
               "nodeType": "Block",
               "src": "358:273:4",
               "statements": [
@@ -66,24 +66,24 @@
                   "condition": {
                     "argumentTypes": null,
                     "commonType": {
-                      "typeIdentifier": "t_enum$_Operation_$2088",
+                      "typeIdentifier": "t_enum$_Operation_$2087",
                       "typeString": "enum Enum.Operation"
                     },
-                    "id": 1081,
+                    "id": 1080,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "argumentTypes": null,
-                      "id": 1077,
+                      "id": 1076,
                       "name": "operation",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1070,
+                      "referencedDeclaration": 1069,
                       "src": "372:9:4",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Operation_$2088",
+                        "typeIdentifier": "t_enum$_Operation_$2087",
                         "typeString": "enum Enum.Operation"
                       }
                     },
@@ -95,32 +95,32 @@
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 1078,
+                          "id": 1077,
                           "name": "Enum",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2089,
+                          "referencedDeclaration": 2088,
                           "src": "385:4:4",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_type$_t_contract$_Enum_$2089_$",
+                            "typeIdentifier": "t_type$_t_contract$_Enum_$2088_$",
                             "typeString": "type(contract Enum)"
                           }
                         },
-                        "id": 1079,
+                        "id": 1078,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "Operation",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 2088,
+                        "referencedDeclaration": 2087,
                         "src": "385:14:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_enum$_Operation_$2088_$",
+                          "typeIdentifier": "t_type$_t_enum$_Operation_$2087_$",
                           "typeString": "type(enum Enum.Operation)"
                         }
                       },
-                      "id": 1080,
+                      "id": 1079,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -130,7 +130,7 @@
                       "referencedDeclaration": null,
                       "src": "385:19:4",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Operation_$2088",
+                        "typeIdentifier": "t_enum$_Operation_$2087",
                         "typeString": "enum Enum.Operation"
                       }
                     },
@@ -144,24 +144,24 @@
                     "condition": {
                       "argumentTypes": null,
                       "commonType": {
-                        "typeIdentifier": "t_enum$_Operation_$2088",
+                        "typeIdentifier": "t_enum$_Operation_$2087",
                         "typeString": "enum Enum.Operation"
                       },
-                      "id": 1095,
+                      "id": 1094,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "leftExpression": {
                         "argumentTypes": null,
-                        "id": 1091,
+                        "id": 1090,
                         "name": "operation",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1070,
+                        "referencedDeclaration": 1069,
                         "src": "482:9:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_enum$_Operation_$2088",
+                          "typeIdentifier": "t_enum$_Operation_$2087",
                           "typeString": "enum Enum.Operation"
                         }
                       },
@@ -173,32 +173,32 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 1092,
+                            "id": 1091,
                             "name": "Enum",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2089,
+                            "referencedDeclaration": 2088,
                             "src": "495:4:4",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_type$_t_contract$_Enum_$2089_$",
+                              "typeIdentifier": "t_type$_t_contract$_Enum_$2088_$",
                               "typeString": "type(contract Enum)"
                             }
                           },
-                          "id": 1093,
+                          "id": 1092,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "memberName": "Operation",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 2088,
+                          "referencedDeclaration": 2087,
                           "src": "495:14:4",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_type$_t_enum$_Operation_$2088_$",
+                            "typeIdentifier": "t_type$_t_enum$_Operation_$2087_$",
                             "typeString": "type(enum Enum.Operation)"
                           }
                         },
-                        "id": 1094,
+                        "id": 1093,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -208,7 +208,7 @@
                         "referencedDeclaration": null,
                         "src": "495:27:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_enum$_Operation_$2088",
+                          "typeIdentifier": "t_enum$_Operation_$2087",
                           "typeString": "enum Enum.Operation"
                         }
                       },
@@ -221,18 +221,18 @@
                     "falseBody": {
                       "expression": {
                         "argumentTypes": null,
-                        "id": 1106,
+                        "id": 1105,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftHandSide": {
                           "argumentTypes": null,
-                          "id": 1104,
+                          "id": 1103,
                           "name": "success",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1075,
+                          "referencedDeclaration": 1074,
                           "src": "609:7:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_bool",
@@ -244,7 +244,7 @@
                         "rightHandSide": {
                           "argumentTypes": null,
                           "hexValue": "66616c7365",
-                          "id": 1105,
+                          "id": 1104,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -265,28 +265,28 @@
                           "typeString": "bool"
                         }
                       },
-                      "id": 1107,
+                      "id": 1106,
                       "nodeType": "ExpressionStatement",
                       "src": "609:15:4"
                     },
-                    "id": 1108,
+                    "id": 1107,
                     "nodeType": "IfStatement",
                     "src": "478:146:4",
                     "trueBody": {
                       "expression": {
                         "argumentTypes": null,
-                        "id": 1102,
+                        "id": 1101,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftHandSide": {
                           "argumentTypes": null,
-                          "id": 1096,
+                          "id": 1095,
                           "name": "success",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1075,
+                          "referencedDeclaration": 1074,
                           "src": "536:7:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_bool",
@@ -300,11 +300,11 @@
                           "arguments": [
                             {
                               "argumentTypes": null,
-                              "id": 1098,
+                              "id": 1097,
                               "name": "to",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1064,
+                              "referencedDeclaration": 1063,
                               "src": "566:2:4",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
@@ -313,11 +313,11 @@
                             },
                             {
                               "argumentTypes": null,
-                              "id": 1099,
+                              "id": 1098,
                               "name": "data",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1068,
+                              "referencedDeclaration": 1067,
                               "src": "570:4:4",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_bytes_memory_ptr",
@@ -326,11 +326,11 @@
                             },
                             {
                               "argumentTypes": null,
-                              "id": 1100,
+                              "id": 1099,
                               "name": "txGas",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1072,
+                              "referencedDeclaration": 1071,
                               "src": "576:5:4",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -353,18 +353,18 @@
                                 "typeString": "uint256"
                               }
                             ],
-                            "id": 1097,
+                            "id": 1096,
                             "name": "executeDelegateCall",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1139,
+                            "referencedDeclaration": 1138,
                             "src": "546:19:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_bytes_memory_ptr_$_t_uint256_$returns$_t_bool_$",
                               "typeString": "function (address,bytes memory,uint256) returns (bool)"
                             }
                           },
-                          "id": 1101,
+                          "id": 1100,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -384,29 +384,29 @@
                           "typeString": "bool"
                         }
                       },
-                      "id": 1103,
+                      "id": 1102,
                       "nodeType": "ExpressionStatement",
                       "src": "536:46:4"
                     }
                   },
-                  "id": 1109,
+                  "id": 1108,
                   "nodeType": "IfStatement",
                   "src": "368:256:4",
                   "trueBody": {
                     "expression": {
                       "argumentTypes": null,
-                      "id": 1089,
+                      "id": 1088,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "leftHandSide": {
                         "argumentTypes": null,
-                        "id": 1082,
+                        "id": 1081,
                         "name": "success",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1075,
+                        "referencedDeclaration": 1074,
                         "src": "418:7:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
@@ -420,11 +420,11 @@
                         "arguments": [
                           {
                             "argumentTypes": null,
-                            "id": 1084,
+                            "id": 1083,
                             "name": "to",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1064,
+                            "referencedDeclaration": 1063,
                             "src": "440:2:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address",
@@ -433,11 +433,11 @@
                           },
                           {
                             "argumentTypes": null,
-                            "id": 1085,
+                            "id": 1084,
                             "name": "value",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1066,
+                            "referencedDeclaration": 1065,
                             "src": "444:5:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -446,11 +446,11 @@
                           },
                           {
                             "argumentTypes": null,
-                            "id": 1086,
+                            "id": 1085,
                             "name": "data",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1068,
+                            "referencedDeclaration": 1067,
                             "src": "451:4:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_bytes_memory_ptr",
@@ -459,11 +459,11 @@
                           },
                           {
                             "argumentTypes": null,
-                            "id": 1087,
+                            "id": 1086,
                             "name": "txGas",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1072,
+                            "referencedDeclaration": 1071,
                             "src": "457:5:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -490,18 +490,18 @@
                               "typeString": "uint256"
                             }
                           ],
-                          "id": 1083,
+                          "id": 1082,
                           "name": "executeCall",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1126,
+                          "referencedDeclaration": 1125,
                           "src": "428:11:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$_t_bytes_memory_ptr_$_t_uint256_$returns$_t_bool_$",
                             "typeString": "function (address,uint256,bytes memory,uint256) returns (bool)"
                           }
                         },
-                        "id": 1088,
+                        "id": 1087,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -521,7 +521,7 @@
                         "typeString": "bool"
                       }
                     },
-                    "id": 1090,
+                    "id": 1089,
                     "nodeType": "ExpressionStatement",
                     "src": "418:45:4"
                   }
@@ -529,22 +529,22 @@
               ]
             },
             "documentation": null,
-            "id": 1111,
+            "id": 1110,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "execute",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1073,
+              "id": 1072,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1064,
+                  "id": 1063,
                   "name": "to",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1111,
+                  "scope": 1110,
                   "src": "219:10:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -553,7 +553,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1063,
+                    "id": 1062,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "219:7:4",
@@ -568,10 +568,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1066,
+                  "id": 1065,
                   "name": "value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1111,
+                  "scope": 1110,
                   "src": "231:13:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -580,7 +580,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1065,
+                    "id": 1064,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "231:7:4",
@@ -594,10 +594,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1068,
+                  "id": 1067,
                   "name": "data",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1111,
+                  "scope": 1110,
                   "src": "246:17:4",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -606,7 +606,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 1067,
+                    "id": 1066,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "246:5:4",
@@ -620,26 +620,26 @@
                 },
                 {
                   "constant": false,
-                  "id": 1070,
+                  "id": 1069,
                   "name": "operation",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1111,
+                  "scope": 1110,
                   "src": "265:24:4",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_enum$_Operation_$2088",
+                    "typeIdentifier": "t_enum$_Operation_$2087",
                     "typeString": "enum Enum.Operation"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 1069,
+                    "id": 1068,
                     "name": "Enum.Operation",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 2088,
+                    "referencedDeclaration": 2087,
                     "src": "265:14:4",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_Operation_$2088",
+                      "typeIdentifier": "t_enum$_Operation_$2087",
                       "typeString": "enum Enum.Operation"
                     }
                   },
@@ -648,10 +648,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1072,
+                  "id": 1071,
                   "name": "txGas",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1111,
+                  "scope": 1110,
                   "src": "291:13:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -660,7 +660,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1071,
+                    "id": 1070,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "291:7:4",
@@ -676,15 +676,15 @@
               "src": "218:87:4"
             },
             "returnParameters": {
-              "id": 1076,
+              "id": 1075,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1075,
+                  "id": 1074,
                   "name": "success",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1111,
+                  "scope": 1110,
                   "src": "340:12:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -693,7 +693,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 1074,
+                    "id": 1073,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "340:4:4",
@@ -708,7 +708,7 @@
               ],
               "src": "339:14:4"
             },
-            "scope": 1140,
+            "scope": 1139,
             "src": "202:429:4",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -716,7 +716,7 @@
           },
           {
             "body": {
-              "id": 1125,
+              "id": 1124,
               "nodeType": "Block",
               "src": "771:182:4",
               "statements": [
@@ -724,7 +724,7 @@
                   "externalReferences": [
                     {
                       "success": {
-                        "declaration": 1122,
+                        "declaration": 1121,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "868:7:4",
@@ -733,7 +733,7 @@
                     },
                     {
                       "data": {
-                        "declaration": 1117,
+                        "declaration": 1116,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "925:4:4",
@@ -742,7 +742,7 @@
                     },
                     {
                       "data": {
-                        "declaration": 1117,
+                        "declaration": 1116,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "906:4:4",
@@ -751,7 +751,7 @@
                     },
                     {
                       "txGas": {
-                        "declaration": 1119,
+                        "declaration": 1118,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "884:5:4",
@@ -760,7 +760,7 @@
                     },
                     {
                       "to": {
-                        "declaration": 1113,
+                        "declaration": 1112,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "891:2:4",
@@ -769,7 +769,7 @@
                     },
                     {
                       "value": {
-                        "declaration": 1115,
+                        "declaration": 1114,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "895:5:4",
@@ -777,7 +777,7 @@
                       }
                     }
                   ],
-                  "id": 1124,
+                  "id": 1123,
                   "nodeType": "InlineAssembly",
                   "operations": "{\n    success := call(txGas, to, value, add(data, 0x20), mload(data), 0, 0)\n}",
                   "src": "845:102:4"
@@ -785,22 +785,22 @@
               ]
             },
             "documentation": null,
-            "id": 1126,
+            "id": 1125,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "executeCall",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1120,
+              "id": 1119,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1113,
+                  "id": 1112,
                   "name": "to",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1126,
+                  "scope": 1125,
                   "src": "658:10:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -809,7 +809,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1112,
+                    "id": 1111,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "658:7:4",
@@ -824,10 +824,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1115,
+                  "id": 1114,
                   "name": "value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1126,
+                  "scope": 1125,
                   "src": "670:13:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -836,7 +836,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1114,
+                    "id": 1113,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "670:7:4",
@@ -850,10 +850,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1117,
+                  "id": 1116,
                   "name": "data",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1126,
+                  "scope": 1125,
                   "src": "685:17:4",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -862,7 +862,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 1116,
+                    "id": 1115,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "685:5:4",
@@ -876,10 +876,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1119,
+                  "id": 1118,
                   "name": "txGas",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1126,
+                  "scope": 1125,
                   "src": "704:13:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -888,7 +888,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1118,
+                    "id": 1117,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "704:7:4",
@@ -904,15 +904,15 @@
               "src": "657:61:4"
             },
             "returnParameters": {
-              "id": 1123,
+              "id": 1122,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1122,
+                  "id": 1121,
                   "name": "success",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1126,
+                  "scope": 1125,
                   "src": "753:12:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -921,7 +921,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 1121,
+                    "id": 1120,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "753:4:4",
@@ -936,7 +936,7 @@
               ],
               "src": "752:14:4"
             },
-            "scope": 1140,
+            "scope": 1139,
             "src": "637:316:4",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -944,7 +944,7 @@
           },
           {
             "body": {
-              "id": 1138,
+              "id": 1137,
               "nodeType": "Block",
               "src": "1086:183:4",
               "statements": [
@@ -952,7 +952,7 @@
                   "externalReferences": [
                     {
                       "success": {
-                        "declaration": 1135,
+                        "declaration": 1134,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "1183:7:4",
@@ -961,7 +961,7 @@
                     },
                     {
                       "data": {
-                        "declaration": 1130,
+                        "declaration": 1129,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "1241:4:4",
@@ -970,7 +970,7 @@
                     },
                     {
                       "data": {
-                        "declaration": 1130,
+                        "declaration": 1129,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "1222:4:4",
@@ -979,7 +979,7 @@
                     },
                     {
                       "txGas": {
-                        "declaration": 1132,
+                        "declaration": 1131,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "1207:5:4",
@@ -988,7 +988,7 @@
                     },
                     {
                       "to": {
-                        "declaration": 1128,
+                        "declaration": 1127,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "1214:2:4",
@@ -996,7 +996,7 @@
                       }
                     }
                   ],
-                  "id": 1137,
+                  "id": 1136,
                   "nodeType": "InlineAssembly",
                   "operations": "{\n    success := delegatecall(txGas, to, add(data, 0x20), mload(data), 0, 0)\n}",
                   "src": "1160:103:4"
@@ -1004,22 +1004,22 @@
               ]
             },
             "documentation": null,
-            "id": 1139,
+            "id": 1138,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "executeDelegateCall",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1133,
+              "id": 1132,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1128,
+                  "id": 1127,
                   "name": "to",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1139,
+                  "scope": 1138,
                   "src": "988:10:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1028,7 +1028,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1127,
+                    "id": 1126,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "988:7:4",
@@ -1043,10 +1043,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1130,
+                  "id": 1129,
                   "name": "data",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1139,
+                  "scope": 1138,
                   "src": "1000:17:4",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1055,7 +1055,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 1129,
+                    "id": 1128,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "1000:5:4",
@@ -1069,10 +1069,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1132,
+                  "id": 1131,
                   "name": "txGas",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1139,
+                  "scope": 1138,
                   "src": "1019:13:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1081,7 +1081,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1131,
+                    "id": 1130,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1019:7:4",
@@ -1097,15 +1097,15 @@
               "src": "987:46:4"
             },
             "returnParameters": {
-              "id": 1136,
+              "id": 1135,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1135,
+                  "id": 1134,
                   "name": "success",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1139,
+                  "scope": 1138,
                   "src": "1068:12:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1114,7 +1114,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 1134,
+                    "id": 1133,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "1068:4:4",
@@ -1129,14 +1129,14 @@
               ],
               "src": "1067:14:4"
             },
-            "scope": 1140,
+            "scope": 1139,
             "src": "959:310:4",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "internal"
           }
         ],
-        "scope": 1141,
+        "scope": 1140,
         "src": "177:1094:4"
       }
     ],
@@ -1146,14 +1146,14 @@
     "absolutePath": "@gnosis.pm/safe-contracts/contracts/base/Executor.sol",
     "exportedSymbols": {
       "Executor": [
-        1140
+        1139
       ]
     },
-    "id": 1141,
+    "id": 1140,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1061,
+        "id": 1060,
         "literals": [
           "solidity",
           ">=",
@@ -1169,10 +1169,10 @@
       {
         "absolutePath": "@gnosis.pm/safe-contracts/contracts/common/Enum.sol",
         "file": "../common/Enum.sol",
-        "id": 1062,
+        "id": 1061,
         "nodeType": "ImportDirective",
-        "scope": 1141,
-        "sourceUnit": 2090,
+        "scope": 1140,
+        "sourceUnit": 2089,
         "src": "32:28:4",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1183,16 +1183,16 @@
         "contractKind": "contract",
         "documentation": "@title Executor - A contract that can execute transactions\n @author Richard Meissner - <richard@gnosis.pm>",
         "fullyImplemented": true,
-        "id": 1140,
+        "id": 1139,
         "linearizedBaseContracts": [
-          1140
+          1139
         ],
         "name": "Executor",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 1110,
+              "id": 1109,
               "nodeType": "Block",
               "src": "358:273:4",
               "statements": [
@@ -1200,24 +1200,24 @@
                   "condition": {
                     "argumentTypes": null,
                     "commonType": {
-                      "typeIdentifier": "t_enum$_Operation_$2088",
+                      "typeIdentifier": "t_enum$_Operation_$2087",
                       "typeString": "enum Enum.Operation"
                     },
-                    "id": 1081,
+                    "id": 1080,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "argumentTypes": null,
-                      "id": 1077,
+                      "id": 1076,
                       "name": "operation",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1070,
+                      "referencedDeclaration": 1069,
                       "src": "372:9:4",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Operation_$2088",
+                        "typeIdentifier": "t_enum$_Operation_$2087",
                         "typeString": "enum Enum.Operation"
                       }
                     },
@@ -1229,32 +1229,32 @@
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 1078,
+                          "id": 1077,
                           "name": "Enum",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2089,
+                          "referencedDeclaration": 2088,
                           "src": "385:4:4",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_type$_t_contract$_Enum_$2089_$",
+                            "typeIdentifier": "t_type$_t_contract$_Enum_$2088_$",
                             "typeString": "type(contract Enum)"
                           }
                         },
-                        "id": 1079,
+                        "id": 1078,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "Operation",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 2088,
+                        "referencedDeclaration": 2087,
                         "src": "385:14:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_enum$_Operation_$2088_$",
+                          "typeIdentifier": "t_type$_t_enum$_Operation_$2087_$",
                           "typeString": "type(enum Enum.Operation)"
                         }
                       },
-                      "id": 1080,
+                      "id": 1079,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -1264,7 +1264,7 @@
                       "referencedDeclaration": null,
                       "src": "385:19:4",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Operation_$2088",
+                        "typeIdentifier": "t_enum$_Operation_$2087",
                         "typeString": "enum Enum.Operation"
                       }
                     },
@@ -1278,24 +1278,24 @@
                     "condition": {
                       "argumentTypes": null,
                       "commonType": {
-                        "typeIdentifier": "t_enum$_Operation_$2088",
+                        "typeIdentifier": "t_enum$_Operation_$2087",
                         "typeString": "enum Enum.Operation"
                       },
-                      "id": 1095,
+                      "id": 1094,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "leftExpression": {
                         "argumentTypes": null,
-                        "id": 1091,
+                        "id": 1090,
                         "name": "operation",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1070,
+                        "referencedDeclaration": 1069,
                         "src": "482:9:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_enum$_Operation_$2088",
+                          "typeIdentifier": "t_enum$_Operation_$2087",
                           "typeString": "enum Enum.Operation"
                         }
                       },
@@ -1307,32 +1307,32 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 1092,
+                            "id": 1091,
                             "name": "Enum",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2089,
+                            "referencedDeclaration": 2088,
                             "src": "495:4:4",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_type$_t_contract$_Enum_$2089_$",
+                              "typeIdentifier": "t_type$_t_contract$_Enum_$2088_$",
                               "typeString": "type(contract Enum)"
                             }
                           },
-                          "id": 1093,
+                          "id": 1092,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "memberName": "Operation",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 2088,
+                          "referencedDeclaration": 2087,
                           "src": "495:14:4",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_type$_t_enum$_Operation_$2088_$",
+                            "typeIdentifier": "t_type$_t_enum$_Operation_$2087_$",
                             "typeString": "type(enum Enum.Operation)"
                           }
                         },
-                        "id": 1094,
+                        "id": 1093,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -1342,7 +1342,7 @@
                         "referencedDeclaration": null,
                         "src": "495:27:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_enum$_Operation_$2088",
+                          "typeIdentifier": "t_enum$_Operation_$2087",
                           "typeString": "enum Enum.Operation"
                         }
                       },
@@ -1355,18 +1355,18 @@
                     "falseBody": {
                       "expression": {
                         "argumentTypes": null,
-                        "id": 1106,
+                        "id": 1105,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftHandSide": {
                           "argumentTypes": null,
-                          "id": 1104,
+                          "id": 1103,
                           "name": "success",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1075,
+                          "referencedDeclaration": 1074,
                           "src": "609:7:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_bool",
@@ -1378,7 +1378,7 @@
                         "rightHandSide": {
                           "argumentTypes": null,
                           "hexValue": "66616c7365",
-                          "id": 1105,
+                          "id": 1104,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -1399,28 +1399,28 @@
                           "typeString": "bool"
                         }
                       },
-                      "id": 1107,
+                      "id": 1106,
                       "nodeType": "ExpressionStatement",
                       "src": "609:15:4"
                     },
-                    "id": 1108,
+                    "id": 1107,
                     "nodeType": "IfStatement",
                     "src": "478:146:4",
                     "trueBody": {
                       "expression": {
                         "argumentTypes": null,
-                        "id": 1102,
+                        "id": 1101,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftHandSide": {
                           "argumentTypes": null,
-                          "id": 1096,
+                          "id": 1095,
                           "name": "success",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1075,
+                          "referencedDeclaration": 1074,
                           "src": "536:7:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_bool",
@@ -1434,11 +1434,11 @@
                           "arguments": [
                             {
                               "argumentTypes": null,
-                              "id": 1098,
+                              "id": 1097,
                               "name": "to",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1064,
+                              "referencedDeclaration": 1063,
                               "src": "566:2:4",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
@@ -1447,11 +1447,11 @@
                             },
                             {
                               "argumentTypes": null,
-                              "id": 1099,
+                              "id": 1098,
                               "name": "data",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1068,
+                              "referencedDeclaration": 1067,
                               "src": "570:4:4",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_bytes_memory_ptr",
@@ -1460,11 +1460,11 @@
                             },
                             {
                               "argumentTypes": null,
-                              "id": 1100,
+                              "id": 1099,
                               "name": "txGas",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1072,
+                              "referencedDeclaration": 1071,
                               "src": "576:5:4",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -1487,18 +1487,18 @@
                                 "typeString": "uint256"
                               }
                             ],
-                            "id": 1097,
+                            "id": 1096,
                             "name": "executeDelegateCall",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1139,
+                            "referencedDeclaration": 1138,
                             "src": "546:19:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_bytes_memory_ptr_$_t_uint256_$returns$_t_bool_$",
                               "typeString": "function (address,bytes memory,uint256) returns (bool)"
                             }
                           },
-                          "id": 1101,
+                          "id": 1100,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1518,29 +1518,29 @@
                           "typeString": "bool"
                         }
                       },
-                      "id": 1103,
+                      "id": 1102,
                       "nodeType": "ExpressionStatement",
                       "src": "536:46:4"
                     }
                   },
-                  "id": 1109,
+                  "id": 1108,
                   "nodeType": "IfStatement",
                   "src": "368:256:4",
                   "trueBody": {
                     "expression": {
                       "argumentTypes": null,
-                      "id": 1089,
+                      "id": 1088,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "leftHandSide": {
                         "argumentTypes": null,
-                        "id": 1082,
+                        "id": 1081,
                         "name": "success",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1075,
+                        "referencedDeclaration": 1074,
                         "src": "418:7:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
@@ -1554,11 +1554,11 @@
                         "arguments": [
                           {
                             "argumentTypes": null,
-                            "id": 1084,
+                            "id": 1083,
                             "name": "to",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1064,
+                            "referencedDeclaration": 1063,
                             "src": "440:2:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address",
@@ -1567,11 +1567,11 @@
                           },
                           {
                             "argumentTypes": null,
-                            "id": 1085,
+                            "id": 1084,
                             "name": "value",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1066,
+                            "referencedDeclaration": 1065,
                             "src": "444:5:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -1580,11 +1580,11 @@
                           },
                           {
                             "argumentTypes": null,
-                            "id": 1086,
+                            "id": 1085,
                             "name": "data",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1068,
+                            "referencedDeclaration": 1067,
                             "src": "451:4:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_bytes_memory_ptr",
@@ -1593,11 +1593,11 @@
                           },
                           {
                             "argumentTypes": null,
-                            "id": 1087,
+                            "id": 1086,
                             "name": "txGas",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1072,
+                            "referencedDeclaration": 1071,
                             "src": "457:5:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -1624,18 +1624,18 @@
                               "typeString": "uint256"
                             }
                           ],
-                          "id": 1083,
+                          "id": 1082,
                           "name": "executeCall",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1126,
+                          "referencedDeclaration": 1125,
                           "src": "428:11:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$_t_bytes_memory_ptr_$_t_uint256_$returns$_t_bool_$",
                             "typeString": "function (address,uint256,bytes memory,uint256) returns (bool)"
                           }
                         },
-                        "id": 1088,
+                        "id": 1087,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1655,7 +1655,7 @@
                         "typeString": "bool"
                       }
                     },
-                    "id": 1090,
+                    "id": 1089,
                     "nodeType": "ExpressionStatement",
                     "src": "418:45:4"
                   }
@@ -1663,22 +1663,22 @@
               ]
             },
             "documentation": null,
-            "id": 1111,
+            "id": 1110,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "execute",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1073,
+              "id": 1072,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1064,
+                  "id": 1063,
                   "name": "to",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1111,
+                  "scope": 1110,
                   "src": "219:10:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1687,7 +1687,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1063,
+                    "id": 1062,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "219:7:4",
@@ -1702,10 +1702,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1066,
+                  "id": 1065,
                   "name": "value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1111,
+                  "scope": 1110,
                   "src": "231:13:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1714,7 +1714,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1065,
+                    "id": 1064,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "231:7:4",
@@ -1728,10 +1728,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1068,
+                  "id": 1067,
                   "name": "data",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1111,
+                  "scope": 1110,
                   "src": "246:17:4",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1740,7 +1740,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 1067,
+                    "id": 1066,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "246:5:4",
@@ -1754,26 +1754,26 @@
                 },
                 {
                   "constant": false,
-                  "id": 1070,
+                  "id": 1069,
                   "name": "operation",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1111,
+                  "scope": 1110,
                   "src": "265:24:4",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_enum$_Operation_$2088",
+                    "typeIdentifier": "t_enum$_Operation_$2087",
                     "typeString": "enum Enum.Operation"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 1069,
+                    "id": 1068,
                     "name": "Enum.Operation",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 2088,
+                    "referencedDeclaration": 2087,
                     "src": "265:14:4",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_Operation_$2088",
+                      "typeIdentifier": "t_enum$_Operation_$2087",
                       "typeString": "enum Enum.Operation"
                     }
                   },
@@ -1782,10 +1782,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1072,
+                  "id": 1071,
                   "name": "txGas",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1111,
+                  "scope": 1110,
                   "src": "291:13:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1794,7 +1794,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1071,
+                    "id": 1070,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "291:7:4",
@@ -1810,15 +1810,15 @@
               "src": "218:87:4"
             },
             "returnParameters": {
-              "id": 1076,
+              "id": 1075,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1075,
+                  "id": 1074,
                   "name": "success",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1111,
+                  "scope": 1110,
                   "src": "340:12:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1827,7 +1827,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 1074,
+                    "id": 1073,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "340:4:4",
@@ -1842,7 +1842,7 @@
               ],
               "src": "339:14:4"
             },
-            "scope": 1140,
+            "scope": 1139,
             "src": "202:429:4",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1850,7 +1850,7 @@
           },
           {
             "body": {
-              "id": 1125,
+              "id": 1124,
               "nodeType": "Block",
               "src": "771:182:4",
               "statements": [
@@ -1858,7 +1858,7 @@
                   "externalReferences": [
                     {
                       "success": {
-                        "declaration": 1122,
+                        "declaration": 1121,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "868:7:4",
@@ -1867,7 +1867,7 @@
                     },
                     {
                       "data": {
-                        "declaration": 1117,
+                        "declaration": 1116,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "925:4:4",
@@ -1876,7 +1876,7 @@
                     },
                     {
                       "data": {
-                        "declaration": 1117,
+                        "declaration": 1116,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "906:4:4",
@@ -1885,7 +1885,7 @@
                     },
                     {
                       "txGas": {
-                        "declaration": 1119,
+                        "declaration": 1118,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "884:5:4",
@@ -1894,7 +1894,7 @@
                     },
                     {
                       "to": {
-                        "declaration": 1113,
+                        "declaration": 1112,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "891:2:4",
@@ -1903,7 +1903,7 @@
                     },
                     {
                       "value": {
-                        "declaration": 1115,
+                        "declaration": 1114,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "895:5:4",
@@ -1911,7 +1911,7 @@
                       }
                     }
                   ],
-                  "id": 1124,
+                  "id": 1123,
                   "nodeType": "InlineAssembly",
                   "operations": "{\n    success := call(txGas, to, value, add(data, 0x20), mload(data), 0, 0)\n}",
                   "src": "845:102:4"
@@ -1919,22 +1919,22 @@
               ]
             },
             "documentation": null,
-            "id": 1126,
+            "id": 1125,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "executeCall",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1120,
+              "id": 1119,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1113,
+                  "id": 1112,
                   "name": "to",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1126,
+                  "scope": 1125,
                   "src": "658:10:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1943,7 +1943,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1112,
+                    "id": 1111,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "658:7:4",
@@ -1958,10 +1958,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1115,
+                  "id": 1114,
                   "name": "value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1126,
+                  "scope": 1125,
                   "src": "670:13:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1970,7 +1970,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1114,
+                    "id": 1113,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "670:7:4",
@@ -1984,10 +1984,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1117,
+                  "id": 1116,
                   "name": "data",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1126,
+                  "scope": 1125,
                   "src": "685:17:4",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1996,7 +1996,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 1116,
+                    "id": 1115,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "685:5:4",
@@ -2010,10 +2010,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1119,
+                  "id": 1118,
                   "name": "txGas",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1126,
+                  "scope": 1125,
                   "src": "704:13:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2022,7 +2022,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1118,
+                    "id": 1117,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "704:7:4",
@@ -2038,15 +2038,15 @@
               "src": "657:61:4"
             },
             "returnParameters": {
-              "id": 1123,
+              "id": 1122,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1122,
+                  "id": 1121,
                   "name": "success",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1126,
+                  "scope": 1125,
                   "src": "753:12:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2055,7 +2055,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 1121,
+                    "id": 1120,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "753:4:4",
@@ -2070,7 +2070,7 @@
               ],
               "src": "752:14:4"
             },
-            "scope": 1140,
+            "scope": 1139,
             "src": "637:316:4",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -2078,7 +2078,7 @@
           },
           {
             "body": {
-              "id": 1138,
+              "id": 1137,
               "nodeType": "Block",
               "src": "1086:183:4",
               "statements": [
@@ -2086,7 +2086,7 @@
                   "externalReferences": [
                     {
                       "success": {
-                        "declaration": 1135,
+                        "declaration": 1134,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "1183:7:4",
@@ -2095,7 +2095,7 @@
                     },
                     {
                       "data": {
-                        "declaration": 1130,
+                        "declaration": 1129,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "1241:4:4",
@@ -2104,7 +2104,7 @@
                     },
                     {
                       "data": {
-                        "declaration": 1130,
+                        "declaration": 1129,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "1222:4:4",
@@ -2113,7 +2113,7 @@
                     },
                     {
                       "txGas": {
-                        "declaration": 1132,
+                        "declaration": 1131,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "1207:5:4",
@@ -2122,7 +2122,7 @@
                     },
                     {
                       "to": {
-                        "declaration": 1128,
+                        "declaration": 1127,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "1214:2:4",
@@ -2130,7 +2130,7 @@
                       }
                     }
                   ],
-                  "id": 1137,
+                  "id": 1136,
                   "nodeType": "InlineAssembly",
                   "operations": "{\n    success := delegatecall(txGas, to, add(data, 0x20), mload(data), 0, 0)\n}",
                   "src": "1160:103:4"
@@ -2138,22 +2138,22 @@
               ]
             },
             "documentation": null,
-            "id": 1139,
+            "id": 1138,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "executeDelegateCall",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1133,
+              "id": 1132,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1128,
+                  "id": 1127,
                   "name": "to",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1139,
+                  "scope": 1138,
                   "src": "988:10:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2162,7 +2162,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1127,
+                    "id": 1126,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "988:7:4",
@@ -2177,10 +2177,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1130,
+                  "id": 1129,
                   "name": "data",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1139,
+                  "scope": 1138,
                   "src": "1000:17:4",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -2189,7 +2189,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 1129,
+                    "id": 1128,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "1000:5:4",
@@ -2203,10 +2203,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1132,
+                  "id": 1131,
                   "name": "txGas",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1139,
+                  "scope": 1138,
                   "src": "1019:13:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2215,7 +2215,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1131,
+                    "id": 1130,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1019:7:4",
@@ -2231,15 +2231,15 @@
               "src": "987:46:4"
             },
             "returnParameters": {
-              "id": 1136,
+              "id": 1135,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1135,
+                  "id": 1134,
                   "name": "success",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1139,
+                  "scope": 1138,
                   "src": "1068:12:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2248,7 +2248,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 1134,
+                    "id": 1133,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "1068:4:4",
@@ -2263,14 +2263,14 @@
               ],
               "src": "1067:14:4"
             },
-            "scope": 1140,
+            "scope": 1139,
             "src": "959:310:4",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "internal"
           }
         ],
-        "scope": 1141,
+        "scope": 1140,
         "src": "177:1094:4"
       }
     ],
@@ -2282,7 +2282,7 @@
   },
   "networks": {},
   "schemaVersion": "3.1.0",
-  "updatedAt": "2020-04-24T22:40:49.050Z",
+  "updatedAt": "2020-05-03T08:41:50.977Z",
   "devdoc": {
     "author": "Richard Meissner - <richard@gnosis.pm>",
     "methods": {},

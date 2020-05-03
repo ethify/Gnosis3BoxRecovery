@@ -43,14 +43,14 @@
     "absolutePath": "@gnosis.pm/safe-contracts/contracts/proxies/IProxyCreationCallback.sol",
     "exportedSymbols": {
       "IProxyCreationCallback": [
-        2682
+        2681
       ]
     },
-    "id": 2683,
+    "id": 2682,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2669,
+        "id": 2668,
         "literals": [
           "solidity",
           "^",
@@ -63,10 +63,10 @@
       {
         "absolutePath": "@gnosis.pm/safe-contracts/contracts/proxies/GnosisSafeProxy.sol",
         "file": "./GnosisSafeProxy.sol",
-        "id": 2670,
+        "id": 2669,
         "nodeType": "ImportDirective",
-        "scope": 2683,
-        "sourceUnit": 2451,
+        "scope": 2682,
+        "sourceUnit": 2450,
         "src": "24:31:19",
         "symbolAliases": [],
         "unitAlias": ""
@@ -77,9 +77,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 2682,
+        "id": 2681,
         "linearizedBaseContracts": [
-          2682
+          2681
         ],
         "name": "IProxyCreationCallback",
         "nodeType": "ContractDefinition",
@@ -87,38 +87,38 @@
           {
             "body": null,
             "documentation": null,
-            "id": 2681,
+            "id": 2680,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "proxyCreated",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2679,
+              "id": 2678,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2672,
+                  "id": 2671,
                   "name": "proxy",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2681,
+                  "scope": 2680,
                   "src": "118:21:19",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_GnosisSafeProxy_$2450",
+                    "typeIdentifier": "t_contract$_GnosisSafeProxy_$2449",
                     "typeString": "contract GnosisSafeProxy"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 2671,
+                    "id": 2670,
                     "name": "GnosisSafeProxy",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 2450,
+                    "referencedDeclaration": 2449,
                     "src": "118:15:19",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_GnosisSafeProxy_$2450",
+                      "typeIdentifier": "t_contract$_GnosisSafeProxy_$2449",
                       "typeString": "contract GnosisSafeProxy"
                     }
                   },
@@ -127,10 +127,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2674,
+                  "id": 2673,
                   "name": "_mastercopy",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2681,
+                  "scope": 2680,
                   "src": "141:19:19",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -139,7 +139,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2673,
+                    "id": 2672,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "141:7:19",
@@ -154,10 +154,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2676,
+                  "id": 2675,
                   "name": "initializer",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2681,
+                  "scope": 2680,
                   "src": "162:26:19",
                   "stateVariable": false,
                   "storageLocation": "calldata",
@@ -166,7 +166,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 2675,
+                    "id": 2674,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "162:5:19",
@@ -180,10 +180,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2678,
+                  "id": 2677,
                   "name": "saltNonce",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2681,
+                  "scope": 2680,
                   "src": "190:17:19",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -192,7 +192,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2677,
+                    "id": 2676,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "190:7:19",
@@ -208,19 +208,19 @@
               "src": "117:91:19"
             },
             "returnParameters": {
-              "id": 2680,
+              "id": 2679,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "217:0:19"
             },
-            "scope": 2682,
+            "scope": 2681,
             "src": "96:122:19",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 2683,
+        "scope": 2682,
         "src": "57:163:19"
       }
     ],
@@ -230,14 +230,14 @@
     "absolutePath": "@gnosis.pm/safe-contracts/contracts/proxies/IProxyCreationCallback.sol",
     "exportedSymbols": {
       "IProxyCreationCallback": [
-        2682
+        2681
       ]
     },
-    "id": 2683,
+    "id": 2682,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2669,
+        "id": 2668,
         "literals": [
           "solidity",
           "^",
@@ -250,10 +250,10 @@
       {
         "absolutePath": "@gnosis.pm/safe-contracts/contracts/proxies/GnosisSafeProxy.sol",
         "file": "./GnosisSafeProxy.sol",
-        "id": 2670,
+        "id": 2669,
         "nodeType": "ImportDirective",
-        "scope": 2683,
-        "sourceUnit": 2451,
+        "scope": 2682,
+        "sourceUnit": 2450,
         "src": "24:31:19",
         "symbolAliases": [],
         "unitAlias": ""
@@ -264,9 +264,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 2682,
+        "id": 2681,
         "linearizedBaseContracts": [
-          2682
+          2681
         ],
         "name": "IProxyCreationCallback",
         "nodeType": "ContractDefinition",
@@ -274,38 +274,38 @@
           {
             "body": null,
             "documentation": null,
-            "id": 2681,
+            "id": 2680,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "proxyCreated",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2679,
+              "id": 2678,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2672,
+                  "id": 2671,
                   "name": "proxy",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2681,
+                  "scope": 2680,
                   "src": "118:21:19",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_GnosisSafeProxy_$2450",
+                    "typeIdentifier": "t_contract$_GnosisSafeProxy_$2449",
                     "typeString": "contract GnosisSafeProxy"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 2671,
+                    "id": 2670,
                     "name": "GnosisSafeProxy",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 2450,
+                    "referencedDeclaration": 2449,
                     "src": "118:15:19",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_GnosisSafeProxy_$2450",
+                      "typeIdentifier": "t_contract$_GnosisSafeProxy_$2449",
                       "typeString": "contract GnosisSafeProxy"
                     }
                   },
@@ -314,10 +314,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2674,
+                  "id": 2673,
                   "name": "_mastercopy",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2681,
+                  "scope": 2680,
                   "src": "141:19:19",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -326,7 +326,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2673,
+                    "id": 2672,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "141:7:19",
@@ -341,10 +341,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2676,
+                  "id": 2675,
                   "name": "initializer",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2681,
+                  "scope": 2680,
                   "src": "162:26:19",
                   "stateVariable": false,
                   "storageLocation": "calldata",
@@ -353,7 +353,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 2675,
+                    "id": 2674,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "162:5:19",
@@ -367,10 +367,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2678,
+                  "id": 2677,
                   "name": "saltNonce",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2681,
+                  "scope": 2680,
                   "src": "190:17:19",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -379,7 +379,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2677,
+                    "id": 2676,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "190:7:19",
@@ -395,19 +395,19 @@
               "src": "117:91:19"
             },
             "returnParameters": {
-              "id": 2680,
+              "id": 2679,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "217:0:19"
             },
-            "scope": 2682,
+            "scope": 2681,
             "src": "96:122:19",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 2683,
+        "scope": 2682,
         "src": "57:163:19"
       }
     ],
@@ -419,7 +419,7 @@
   },
   "networks": {},
   "schemaVersion": "3.1.0",
-  "updatedAt": "2020-04-24T22:40:49.066Z",
+  "updatedAt": "2020-05-03T08:41:51.014Z",
   "devdoc": {
     "methods": {}
   },
