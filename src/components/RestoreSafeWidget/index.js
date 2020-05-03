@@ -73,6 +73,7 @@ function RestoreSafeWidget(props) {
     const space = await box.openSpace(spaceName.toLowerCase());
 
     const backupKey = await space.private.get("backupKey");
+    /// THis will give error (Invalid Something)
     const moduleAddress = await space.private.get("moduleAddress");
 
     console.log("backupKey", backupKey);
@@ -124,8 +125,11 @@ function RestoreSafeWidget(props) {
       "0x" + stx.toString("hex"),
       async (err, hash) => {
         if (err) {
+          // Error Somethin
           console.log("buy error", err);
         }
+        // Here Modal to be shown with new account confirmation
+        // Current Account in Metamask - New Safe owner
         console.log("buy hash" + hash);
       }
     );

@@ -209,7 +209,7 @@ function Modal(props) {
               <div className="modal-message">
                 <input
                   className="user-secret-input"
-                  type="text"
+                  type="password"
                   placeholder="Enter Secret Password"
                   onChange={(e) => {
                     setUserSecret(e.target.value);
@@ -222,15 +222,6 @@ function Modal(props) {
                 >
                   <FontAwesomeIcon icon={faKey} />
                   <span>Submit</span>
-                </button>
-
-                <button
-                  type="button"
-                  className="user-secret-add-button"
-                  onClick={testBackup}
-                >
-                  <FontAwesomeIcon icon={faKey} />
-                  <span>Test Submit</span>
                 </button>
               </div>
             </div>
