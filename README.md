@@ -40,7 +40,7 @@ https://gitlab.com/ethifylabs/gnosisthreeboxrecovery/
 ## Github Repo
 https://gitlab.com/ethifylabs/gnosisthreeboxrecovery/
 ## Video Demo
-https://youtu.be/oZpgLr-5Jis
+https://youtu.be/-CtyWcxmqvE
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
